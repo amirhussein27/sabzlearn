@@ -11,10 +11,10 @@
   <body>
     <div class="login-page">
       <div class="form">
-        <input type="text" placeholder="username" class="username" onkeypress="userinput()"/>
-        <span class="username-Validation" >must contain 12 charachter(min)</span>
-        <input type="password" placeholder="password" class="password" onkeypress="userpassword()"/>
-        <span class="password-validation" >must contain 8 charachter(min)</span>
+        <input id="input1" type="text" placeholder="username" class="username" onkeyup="userinput()"/>
+        <span id="span1" class="username-validation" >must contain 12 charachter(min)</span>
+        <input id="input2" type="password" placeholder="password" class="password" onkeydown="userpassword()"/>
+        <span id="span2" class="password-validation" >must contain 8 charachter(min)</span>
         <button onclick="dataValidation()">login</button>
         <p class="message">Not registered? <a>Create an account</a></p>
       </div>
@@ -27,3 +27,5 @@
     </script>
   </body>
 </html>
+
+<!-- 112 -->

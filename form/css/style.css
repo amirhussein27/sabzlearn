@@ -114,7 +114,6 @@ body {
   top: 10px;
   transition: all 1s linear;
 }
-.username-Validation, .password-validation{
-  color: red;
+.username-validation, .password-validation{
 display: none;
 }
