@@ -1,0 +1,33 @@
+body{
+    background-size: contain;
+    background-image: url("svg-css-header-1024x465.png");
+height: 300px;
+}
+.left{
+    float: left;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+.container{
+    margin-top: 50%;
+border: solid 2px gray ;
+border-radius: 15%;
+height: 100px;
+
+}
+.right{
+    float: right;
+    margin-right: 20%;
+    margin-top: 3%;
+
+}
+.inpleft{
+    display: block;
+}
+.inpright{
+    display: block;
+}
+button{
+display: block;
+margin-top: 80px;
+}
