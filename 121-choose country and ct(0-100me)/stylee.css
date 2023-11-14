@@ -1,0 +1,39 @@
+body{
+    height: 500px;
+}
+h1{
+    text-align: center;
+}
+hr{
+    border: solid 2px red;
+}
+p{
+    text-align: center;
+    border: solid gray 5px;
+    margin-top: 20%;
+}
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 250px;
+background-color: rgb(158, 255, 223);
+margin-left: 20%;
+margin-right: 20%;
+margin-top: 30%;
+border-radius: 4%;
+
+}
+.right{
+display: flex;
+flex-direction: column;
+padding-right: 15px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+}
+option{
+    text-align: center;
+}
