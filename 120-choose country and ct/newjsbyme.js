@@ -12,7 +12,7 @@ let countriesdata={
     Canada:['a','b','c'],
     US:['d','e','f'],
     PleaseSelect:['PleaseSelect']
-
+//k
 }
 let selectcity=document.querySelector('.citySelect')
 
