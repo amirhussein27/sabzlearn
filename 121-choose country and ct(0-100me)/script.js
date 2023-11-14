@@ -1,7 +1,8 @@
 let objectdata={
 iran:['tehran','ghom','mashhad'],
 england:['london','liverpool','manchester'],
-usa:['a','b','c']
+usa:['a','b','c'],
+selectcity:['select city']
 }
 let cities=document.querySelector(".cities")
 let countries=document.querySelector(".countries");
