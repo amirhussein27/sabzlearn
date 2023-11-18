@@ -25,7 +25,7 @@ but4.addEventListener('click',function(){
     // myul.innerHTML+='<ul></ul>'
     myul.innerHTML+=myinp;
     // console.log("object");
-    console.log(myinp);
+    // console.log(myinp);
 
 })
 let but2=document.getElementById("but2")
