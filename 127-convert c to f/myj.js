@@ -34,11 +34,16 @@ myinp.value="";
 
 
 convert.addEventListener('click',function(){
-    if(c.innerHTML==="°c"){
+    if(myinp.value===""){
+        result.innerHTML="enter number plaese";
 
-  result.innerHTML=(myinp.value*9/5)+32
-}
+    }
+
 else{
+    if(c.innerHTML==="°f"){
+
+        result.innerHTML=(myinp.value*9/5)+32
+      }
     console.log("object");
     result.innerHTML=(myinp.value-32)*5/9
 }
