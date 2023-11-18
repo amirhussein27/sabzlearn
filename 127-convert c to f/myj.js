@@ -36,15 +36,20 @@ myinp.value="";
 convert.addEventListener('click',function(){
     if(myinp.value===""){
         result.innerHTML="enter number plaese";
+        result.style.color="red"
 
     }
 
 else{
-    if(c.innerHTML==="°f"){
-
-        result.innerHTML=(myinp.value*9/5)+32
+    if(c.innerHTML==="°c"){
+console.log("object");
+        result.innerHTML=(myinp.value*9/5)+32 +"°c"
+        result.style.color="yellow"
       }
-    console.log("object");
-    result.innerHTML=(myinp.value-32)*5/9
+      else{    console.log("b");
+      result.innerHTML=(myinp.value-32)*5/9 +" °f"
+      result.style.color="yellow"
+    }
+
 }
 })
