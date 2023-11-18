@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myp">me</p>
+<button onclick="mine()">change</button>
+    
+<script>
+let myp=document.getElementById("myp")
+let mynewp="me"
+function mine(){
+    if(mynewp=="me"){
+        myp.innerHTML="you"
+    }
+else{
+    myp.innerHTML="yes"
+
+}
+}
+
+    </script>
+</body>
+</html>
