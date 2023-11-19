@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inp">
+    <script>
+    let inp=document.getElementById("inp")
+inp.addEventListener('keydown',function(event){
+    console.log(event);
+if(event.keyCode===13){
+    console.log("اینتر وارد شد");
+}
+})
+</script>
+</body>
+</html>
