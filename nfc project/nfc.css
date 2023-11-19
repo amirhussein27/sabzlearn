@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+#container{
+    margin-top: 25%;
+    border: solid 2px lightcoral;
+    width: 70%;
+    margin: auto;
+background: linear-gradient(#FEB913,#ffffff);
+border-radius: 8%;
+}
+p{
+    font-weight:bold ;
+}
