@@ -15,3 +15,6 @@ p{
 #myinp{
     width: 60px;
 }
+#div1{
+  visibility: hidden;
+}
