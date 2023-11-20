@@ -21,10 +21,22 @@
         background-color: white;
         cursor: pointer;
       }
+      .myspan1{
+        word-spacing: 5px;
+        border: solid 2px black;
+        padding-right: 15px;
+        margin-right: 9px;
+        background-color: white;
+        cursor: pointer;
+      }
       .my1{
-        border: "solid 2px green";
-        background-color: "green";
-        color: white;
+        word-spacing: 5px;
+        border: solid 2px green;
+        padding-right: 15px;
+        margin-right: 9px;
+        background-color: green;
+        cursor: pointer;
+        
       }
       .my1a{
         border: "solid 2px blue";
@@ -37,7 +49,7 @@
   </head>
   <body>
     <ul>
-      <li class="myli"><span id="myspan1"> </span><span id="a">home</span></li>
+      <li class="myli"><span class="myspan1"> </span><span id="a">home</span></li>
       <br />
       <li class="myli"><span id="myspan2"> </span><span id="b">about</span></li>
       <br />
@@ -54,7 +66,7 @@
 
     <script>
       let myli = document.querySelectorAll(".myli");
-      let myspan1 = document.getElementById("myspan1");
+      let myspan1 = document.getElementsByClassName("myspan1");
       let myspan2 = document.getElementById("myspan2");
       let myspan3 = document.getElementById("myspan3");
       let myspan4 = document.getElementById("myspan4");
@@ -64,18 +76,20 @@
       let c = document.getElementById("c");
       let d = document.getElementById("d");
       let done = "✔";
-
+console.log(myspan1);
       //   console.log(myspan1);
-      myspan1.addEventListener("click", function () {
+      myspan1[0].addEventListener("click", function () {
         if (a.style.textDecoration != "line-through") {
           a.style.textDecoration = "line-through";
-          let my1=document.createAttribute("my1")
+          let my1=document.createAttribute("class")
+          my1.value="my1"
           myspan1.attributes.setNamedItem(my1)
         //   myspan1.style.border = "solid 2px green";
         //   myspan1.style.backgroundColor = "green";
         //   myspan1.style.color = "white";
 
           myspan1.innerHTML = done;
+        myspan1.classlist.remove("myspan1")
         } else {
         //   myspan1.style.backgroundColor = "white";
         let my1a=document.createAttribute("my1a")

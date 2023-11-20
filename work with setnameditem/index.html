@@ -8,14 +8,19 @@
     color: brown;
     border: solid 3px red;
 }
-
-
+#myh1{
+    color: aqua;
+}
+.mh2{
+    color: brown;
+    border: solid 3px red;
+}
 
     </style>
 </head>
 <body>
-    <h1 id="myh1">1</h1>
-    <h1 id="myh2">2</h1>
+    <h1 id="myh1">1</h1><button id="btn">rem</button>
+    <h1 id="myh2" class="mh2">2</h1>
     <h1 id="myh3">3</h1>
     <h1 id="myh4">4</h1>
 
@@ -26,13 +31,18 @@ let myh2=document.getElementById("myh2")
 let myh3=document.getElementById("myh3")
 let myh4=document.getElementById("myh1")
 
+
 myh1.addEventListener('click',function(){
    let clickme=document.createAttribute("class");
    clickme.value="clickme"
 myh1.attributes.setNamedItem(clickme);
 })
 
+let btn=document.getElementById("btn")
+btn.addEventListener('click',function(){
+myh2.classList.remove("mh2")
 
+})
 
 
 </script>
