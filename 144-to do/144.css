@@ -8,6 +8,10 @@ body{
   margin-top: 30%;
     background-color: rgb(117, 4, 117);
 border-radius: 5%;
+padding-bottom: 10px;
+vertical-align: auto;
+overflow: hidden;
+
 }
 li{
     color: aliceblue;
@@ -17,9 +21,9 @@ li{
 position: relative;
 }
 .a{
-float: left;
+    margin-left: 0;
 }
-.fa fa-trash{
+#b{
     float: right;
     margin-right: 3px;
 }
