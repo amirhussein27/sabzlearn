@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+      }
+      li {
+        list-style-type: none;
+        display: list-item;
+      }
+      #myspan1,
+      #myspan2,
+      #myspan3,
+      #myspan4 {
+        word-spacing: 5px;
+        border: solid 2px black;
+        padding-right: 15px;
+        margin-right: 9px;
+        background-color: white;
+        cursor: pointer;
+      }
+      .my1{
+        border: "solid 2px green";
+        background-color: "green";
+        color: white;
+      }
+      .my1a{
+        border: "solid 2px blue";
+        background-color: "blue";
+        color: rgb(228, 36, 36);
+      }
+      /* let choose
+      let notchoose */
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="myli"><span id="myspan1"> </span><span id="a">home</span></li>
+      <br />
+      <li class="myli"><span id="myspan2"> </span><span id="b">about</span></li>
+      <br />
+
+      <li class="myli"><span id="myspan3"> </span><span id="c">contact</span></li>
+
+      <br />
+
+      <li class="myli">
+        <span id="myspan4"> </span><span id="d">services</span>
+      </li>
+    </ul>
+    <!-- text-decoration: line-through; -->
+
+    <script>
+      let myli = document.querySelectorAll(".myli");
+      let myspan1 = document.getElementById("myspan1");
+      let myspan2 = document.getElementById("myspan2");
+      let myspan3 = document.getElementById("myspan3");
+      let myspan4 = document.getElementById("myspan4");
+
+      let a = document.getElementById("a");
+      let b = document.getElementById("b");
+      let c = document.getElementById("c");
+      let d = document.getElementById("d");
+      let done = "✔";
+
+      //   console.log(myspan1);
+      myspan1.addEventListener("click", function () {
+        if (a.style.textDecoration != "line-through") {
+          a.style.textDecoration = "line-through";
+          let my1=document.createAttribute("my1")
+          myspan1.attributes.setNamedItem(my1)
+        //   myspan1.style.border = "solid 2px green";
+        //   myspan1.style.backgroundColor = "green";
+        //   myspan1.style.color = "white";
+
+          myspan1.innerHTML = done;
+        } else {
+        //   myspan1.style.backgroundColor = "white";
+        let my1a=document.createAttribute("my1a")
+          a.style.textDecoration = "none";
+        //   myspan1.style.border = "solid 2px black";
+          myspan1.innerHTML = "";
+          myspan1.attributes.removeNamedItem(my1)
+          myspan1.attributes.setNamedItem(my1a)
+
+        }
+      });
+
+      myspan2.addEventListener("click", function () {
+        if (b.style.textDecoration != "line-through") {
+          b.style.textDecoration = "line-through";
+          myspan2.style.border = "solid 2px green";
+          myspan2.style.backgroundColor = "green";
+          myspan2.style.color = "white";
+
+          myspan2.innerHTML = done;
+        } else {
+          myspan2.style.backgroundColor = "white";
+          b.style.textDecoration = "none";
+          myspan2.style.border = "solid 2px black";
+          myspan2.innerHTML = "";
+        }
+      });
+
+      myspan3.addEventListener("click", function () {
+        if (c.style.textDecoration != "line-through") {
+          c.style.textDecoration = "line-through";
+          myspan3.style.border = "solid 2px green";
+          myspan3.style.backgroundColor = "green";
+          myspan3.style.color = "white";
+
+          myspan3.innerHTML = done;
+        } else {
+          myspan3.style.backgroundColor = "white";
+          c.style.textDecoration = "none";
+          myspan3.style.border = "solid 2px black";
+          myspan3.innerHTML = "";
+        }
+      });
+
+
+
+      myspan4.addEventListener("click", function () {
+        if (d.style.textDecoration != "line-through") {
+          d.style.textDecoration = "line-through";
+          myspan4.style.border = "solid 2px green";
+          myspan4.style.backgroundColor = "green";
+          myspan4.style.color = "white";
+
+          myspan4.innerHTML = done;
+        } else {
+          myspan4.style.backgroundColor = "white";
+          d.style.textDecoration = "none";
+          myspan4.style.border = "solid 2px black";
+          myspan4.innerHTML = "";
+        }
+      });
+      //   myspan1.addEventListener("click", function () {
+      //     myli.forEach(function (li) {
+      //       console.log(li.innerHTML);
+      //       li.style.textDecoration = "line-through";
+      //     });
+      //   });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.clickme{
+    color: brown;
+    border: solid 3px red;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1 id="myh1">1</h1>
+    <h1 id="myh2">2</h1>
+    <h1 id="myh3">3</h1>
+    <h1 id="myh4">4</h1>
+
+
+<script>
+let myh1=document.getElementById("myh1")
+let myh2=document.getElementById("myh2")
+let myh3=document.getElementById("myh3")
+let myh4=document.getElementById("myh1")
+
+myh1.addEventListener('click',function(){
+   let clickme=document.createAttribute("class");
+   clickme.value="clickme"
+myh1.attributes.setNamedItem(clickme);
+})
+
+
+
+
+</script>
+</body>
+</html>
