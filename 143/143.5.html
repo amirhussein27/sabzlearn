@@ -144,10 +144,6 @@
                 myspan4.innerHTML = "";
               }
             });
-
-
-
-
             
             //   myspan1.addEventListener("click", function () {
             //     myli.forEach(function (li) {
@@ -168,15 +164,18 @@
 
       let new1=document.getElementById("new1")
       addnew.addEventListener('click',function(){
-      console.log(new1);
+        // console.log(trash1);
+      // console.log(new1.innerHTML);
       new1.innerHTML+='<li class="myli"><span id="myspan4"> </span><span id="new1">'+myinp.value+'</span>-<i class="fa fa-trash"></i></li></ul>'
       })
-      for(let i=0;i<trash1.length;i++)
+      let trashall=trash1.length
+      for(let i=0;i<trashall;i++)
       trash1[i].addEventListener('click',function(){
         // console.log("object");
-        myli[i].remove();
-       
+        myli[i].remove(myli);
+      console.log("object");
       })
+      
     </script>
   </body>
 </html>
