@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    background-color: lightslategray;
+}
+div.container {
+    text-align: center;
+    margin-top: 14%;
+  }
+  
+  ul.myUL {
+    display: inline-block;
+    text-align: left;
+    list-style-type:none;
+    width: 300px;
+    color: black;
+    cursor: pointer;
+  }
+  #trash:hover{
+    color: red;
+  }
+  #trash{
+    color: #fff;
+    float: right;
+    position: relative;
+    margin-top: -20px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: lightsalmon;
+    border-radius: 5%;
+  }
+  input{
+    width: 260px;
+  }
+  h2{
+    color: aliceblue;
+  }
+  h3{
+    cursor: pointer;
+    color:darkred;
+  }
