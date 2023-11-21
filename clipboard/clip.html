@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>try to copy and cut</h1>
+    <textarea name="" id="mine" cols="30" rows="10">this is my text</textarea>
+
+
+
+
+<script>
+let mine=document.getElementById("mine")
+console.log(mine);
+
+mine.addEventListener('copy',function(event){
+    event.preventDefault()
+    // console.log("copy");
+})
+
+mine.addEventListener('cut',function(event){
+    event.preventDefault()
+
+    // console.log("cut");
+})
+
+mine.addEventListener('paste',function(event){
+    event.preventDefault()
+
+    // console.log("paste");
+})
+
+
+
+
+</script>
+
+</body>
+</html>
