@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 25%;
+}
+hr.back{
+    width: 30%;
+    color: white;
+    background-color: white;
+    height: 4px;
+    position: absolute;
+    text-align: center;
+    left: 35%;
+}
+hr.front{
+    width: 0%;
+    color: orangered;
+    background-color: orangered;
+    height: 4px;
+    max-width: 30%;
+    position: absolute;
+    left: 35%;
+
+}
+.counter{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
