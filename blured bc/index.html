@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        margin: 0;
+        }
+        div.container{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        height: 500px;
+        }
+        h1{
+            color: aliceblue;
+            letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 40px;
+}
+button{
+    background-color: orangered;
+    border-radius: 10%;
+    font-size: 30px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+}
+.active.container{
+        filter: blur(5px) brightness(0.7);
+}
+
+.newbox{
+    width: 30px;
+    height: 50px;
+    color: aqua;
+}
+.popup-container{
+    position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: all 0.7s;
+  
+}
+.popup-container.active{
+visibility: hidden;
+opacity: 0;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Welcome to our website</h1>
+    <button id="btn">click to join</button>
+</div>
+    <div class="popup-container active">
+        <h4>20% OFF Offer</h4>
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          name="email"
+          class="input"
+          placeholder="Enter Your Email"
+        />
+        <button class="popup-btn">Join</button>
+        </div>
+        <div class="close-icon">
+          <i class="fas fa-times fa-2x"></i>
+        </div>
+      </div>
+
+<script>
+let popupcontainer=document.querySelector('.popup-container')
+  let btn=  document.getElementById("btn")
+let container=document.querySelector('.container')
+  btn.addEventListener('click',function(){
+container.classList.add("active")
+// console.log(container);
+popupcontainer.classList.remove("active")
+})
+
+
+</script>
+</body>
+</html>
