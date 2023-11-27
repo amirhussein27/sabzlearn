@@ -2,12 +2,15 @@ let mydiv=document.getElementById("content")
 let btn=document.getElementById("btn")
 
 
-mydiv.addEventListener('mousemove',function(){
-    alert("hi")
-})
+mydiv.addEventListener('mousemove',hello)
 
-btn.removeEventListener('click',removebox)
+btn.addEventListener('click',removebox)
 
 function removebox(){
-    console.log("del");
+mydiv.removeEventListener('mousemove',hello)
+
+
 }
+function hello(){
+    console.log("mouse");
+    }
