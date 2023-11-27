@@ -1,0 +1,22 @@
+a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+.section1{
+background-color: rgb(180, 180, 180);
+height: 300px;
+/* margin-left: -8px;
+margin-right: -8px; */
+}
+.section2{
+height: 300px;
+margin-left: -8px;
+margin-right: -8px;
+background-color: rgb(34, 33, 33);
+}
+body{
+    background-color: rgb(180, 180, 180) ;
+height: 1500px;
+font-size: 20px;
+}

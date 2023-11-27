@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+#bala{
+    margin-left: -8px;
+margin-right: -8px;
+margin-top: -8px;
+position: fixed;
+padding-right: 960px;
+transition: color 0.5s;
+}
+.section1{
+background-color: rgb(180, 180, 180);
+height: 300px;
+/* margin-left: -8px;
+margin-right: -8px; */
+}
+.section2{
+height: 300px;
+margin-left: -8px;
+margin-right: -8px;
+background-color: rgb(34, 33, 33);
+}
+body{
+    background-color: #b4b4b4 ;
+height: 1500px;
+font-size: 20px;
+
+}
+.bala2{
+    background-color: gray;
+    transition: color 1.4s;
+}
+</style>
+
+<body style="font-size:20px;height:1500px">
+<div id="bala">
+          <a href="">home</a>
+        <a href="">faq</a>
+        <a href="">service</a>
+        <a href="">about</a><br> <br></div>
+    <div class="section1">  
+      <br> <br>  <br>   <br> <br> 
+        section1</div>
+       
+    <div class="section2" style="color: white;">section2</div>
+<script>
+window.onscroll = function() {myFunction()};
+let bala=document.querySelector('#bala')
+function myFunction() {
+    console.log(document.documentElement.scrollTop);
+ if(document.documentElement.scrollTop>0)
+ {
+bala.classList.add("bala2")
+ }
+ else{
+    bala.classList.remove("bala2")
+
+
+ }
+}
+</script>
+
+</body>
+</html>
