@@ -25,6 +25,10 @@ direction: rtl;
     transition: background-color 1.4s;
     color: white;
 }
+.a4m{
+    background-color: rgb(255, 169, 169);
+  
+}
 </style>
 <body class="w3-light-grey">
     <div class="bala">
@@ -172,8 +176,8 @@ direction: rtl;
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>۱۳۹۵ تا ۱۳۹۹</h6>
           <hr>
         </div>
-      
        
+   
 
     <!-- End Right Column -->
     </div>
@@ -221,6 +225,10 @@ a4.classList.remove("bala2")
 
  }
 }
+a4.addEventListener('click',function(){
+let contact=document.querySelector("#contact")
+contact.classList.add("a4m")
+})
 </script>
 
 </body>
