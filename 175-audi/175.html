@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
+<button id="btn">play music</button>
+<button id="btn2">pause music</button>
+<button id="btn3">show music duration</button>
+<button id="btn4">2x</button>
+<button id="btn5">show currenttime</button>
+<p id="myp"></p>
+
+
+<script>
+let audioelem=document.querySelector('audio')
+let btn=document.getElementById("btn")
+let btn2=document.getElementById("btn2")
+let btn3=document.getElementById("btn3")
+let btn4=document.getElementById("btn4")
+let btn5=document.getElementById("btn5")
+let myp=document.getElementById("myp")
+
+
+
+btn.addEventListener('click',function playhandler() {
+    audioelem.play()
+ }
+)
+btn2.addEventListener('click',function pausehandler() {
+    audioelem.pause()
+ }
+)
+btn3.addEventListener('click',function durationhandler() {
+   console.log('duration',audioelem.duration)
+ }
+)
+btn4.addEventListener('click',function paybackratehandler() {
+    audioelem.playbackRate=2
+   console.log('music speed 2x')
+ }
+)
+btn5.addEventListener('click',setInterval(function currenttimehandler() {
+   console.log('currenttimr',audioelem.currentTime)
+   let currentTimeme=audioelem.currentTime
+   myp.innerHTML='00:'+'0'+Math.floor(currentTimeme)
+ },1000) 
+)
+//audioelem.play()
+//audioelem.pause()
+//audioelem.duration()
+//audioelem.currenttime()
+//audioelem.playbackrate()
+if(Math.floor(currentTimeme)>10){
+    charAt(myp).remove()
+}
+</script>
+</body>
+</html>
