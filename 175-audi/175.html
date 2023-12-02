@@ -3,18 +3,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+        }
+        #myimg{
+     
+        }
+        button{
+            border-radius: 15%;
+            cursor: pointer;
+            background-color: rgba(156, 115, 115, 0.26);
+        }
+        #btn3{
+            display: none;
+        }
+        #btn5{
+            display: none;
+
+        }
+        #btn4{
+            font-size: 36px;
+            border: none;
+            background-color: lightgoldenrodyellow;
+        }
+        #btn,#btn2,#forward{
+            cursor: pointer;
+            margin-right: 10px;
+
+        }
+    </style>
 </head>
 <body>
-    <audio src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
-<button id="btn">play music</button>
-<button id="btn2">pause music</button>
-<button id="btn3">show music duration</button>
-<button id="btn4">2x</button>
+    <audio id="s1" src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
+<audio id="unf" src="https://ts1.tarafdari.com/contents/user196737/content-sound/metalica-the-unforgiven-2.mp3"></audio>
+    <img id="myimg" src="https://www.creativefabrica.com/wp-content/uploads/2021/03/16/1615891326/Music-on-World-off.jpg" alt="">
+    <i id="btn" class="fa fa-play" style="font-size:36px;"></i>
+<i id="btn2" style="font-size:36px" class="fa">&#xf04c;</i>
+<button id="btn3"></button>
+<i id="forward" class="fa fa-forward" style="font-size:36px;"></i>
+<button id="btn4">x2</button>
 <button id="btn5">show currenttime</button>
 <p id="myp"></p>
 
 
 <script>
+let s1=document.getElementById("s1")
+
 let audioelem=document.querySelector('audio')
 let btn=document.getElementById("btn")
 let btn2=document.getElementById("btn2")
@@ -22,15 +63,23 @@ let btn3=document.getElementById("btn3")
 let btn4=document.getElementById("btn4")
 let btn5=document.getElementById("btn5")
 let myp=document.getElementById("myp")
+let unf=document.getElementById("unf")
 
+let forward=document.getElementById("forward")
 
+forward.addEventListener('click',function nextsong(){
+    audioelem.pause()
+    unf.play()
+})
 
 btn.addEventListener('click',function playhandler() {
-    audioelem.play()
+    s1.play()
  }
 )
 btn2.addEventListener('click',function pausehandler() {
     audioelem.pause()
+    unf.pause()
+ 
  }
 )
 btn3.addEventListener('click',function durationhandler() {
