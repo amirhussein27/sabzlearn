@@ -3,125 +3,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .container{
-            position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 1px solid rgb(0, 0, 0);
-    text-align: center;
-        }
-        #myimg{
-     
-        }
-        button{
-            border-radius: 15%;
-            cursor: pointer;
-            background-color: rgba(156, 115, 115, 0.26);
-        }
-        #btn{
-            position: absolute;
-
-    top: 72%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-        }
-        #btn2{
-            position: absolute;
-
-            top: 72%;
-    left: 40%;
-    transform: translate(-50%,-50%);
-        }
-        #forward{
-            top: 72%;
-            position: absolute;
-
-    left: 60%;
-    transform: translate(-50%,-50%);
-        }
-        #btn3{
-            display: none;
-        }
-        #btn5{
-            display: none;
-
-        }
-        #btn45{
-            position: absolute;
-            margin-top: -30px;
-            font-size: 36px;
-            left: 35%;
-            border: none;
-            background-color: lightgoldenrodyellow;
-        }
-        #btn4{
-            position: absolute;
-            margin-top: -30px;
-
-            font-size: 36px;
-            left: 45%;
-            border: none;
-            background-color: lightgoldenrodyellow;
-        }
-        #btn46{
-            position: absolute;
-            margin-top: -30px;
-
-            font-size: 36px;
-            left: 55%;
-            border: none;
-            background-color: lightgoldenrodyellow;
-        }
-        #btn,#btn2,#forward{
-            cursor: pointer;
-            margin-right: 10px;
-
-        }
-        li{
-           list-style-type: none;
-        }
-        #playing{
-            display: none;
-        }
-        #pause2{
-            display: none;
-
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-<img id="playing" style="position: absolute; width: 80px;" src="https://cliply.co/wp-content/uploads/2021/09/142109580_MUSIC_TONES_400px.gif" alt="">
-<img id="pause2" style="position: absolute; width: 80px;" src="https://png.pngtree.com/png-vector/20190723/ourmid/pngtree-pause-button-icon-png-image_1570129.jpg" alt="">
-<p id="sad"></p>
-    <audio id="s1" src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
-<audio id="unf" src="https://ts1.tarafdari.com/contents/user196737/content-sound/metalica-the-unforgiven-2.mp3"></audio>
-    <img id="myimg" src="https://www.creativefabrica.com/wp-content/uploads/2021/03/16/1615891326/Music-on-World-off.jpg" alt="">
-    <i id="btn" class="fa fa-play" style="font-size:36px;"></i>
-<i id="btn2" style="font-size:36px" class="fa">&#xf04c;</i>
-<button id="btn3"></button>
-<i id="forward" class="fa fa-forward" style="font-size:36px;"></i>
-
+    <audio src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
+<button id="btn">play music</button>
+<button id="btn2">pause music</button>
+<button id="btn3">show music duration</button>
+<button id="btn4">2x</button>
 <button id="btn5">show currenttime</button>
 
 <p id="myp"></p>
-<ul>
-    <br><br> <br><br>
 
-    <li id="music1" style="cursor: pointer;">music 1</li>
-    <li id="unfor" style="cursor: pointer;">unforgive 2</li>
-    <br><br> <br>
 
-    <button  id="btn46">x3</button>
-
-    <button  id="btn4">x2</button>
-    <button id="btn45">x1</button>
-</ul>
-</div>
-</body>
 <script>
 let s1=document.getElementById("s1")
 
@@ -130,57 +23,10 @@ let btn=document.getElementById("btn")
 let btn2=document.getElementById("btn2")
 let btn3=document.getElementById("btn3")
 let btn4=document.getElementById("btn4")
-let btn45=document.getElementById("btn45")
-let btn46=document.getElementById("btn46")
-let playing=document.getElementById("playing")
-let pause2=document.getElementById("pause2")
-let music1=document.getElementById("music1")
-let unfor=document.getElementById("unfor")
-let sad=document.getElementById("sad")
-
 let btn5=document.getElementById("btn5")
 let myp=document.getElementById("myp")
-let unf=document.getElementById("unf")
-
-let forward=document.getElementById("forward")
-
-let container=document.querySelector('.container')
 
 
-music1.addEventListener('click', function(){
-    s1.play()
-    unf.pause()
-    playing.style.display="block"
-    pause2.style.display="none"
-    sad.innerText="piano playing"
-sad.style.display="block" 
-document.body.style.backgroundColor="lightblue"
-})
-unfor.addEventListener('click', function(){
-    unf.play()
-    s1.pause()
-    playing.style.display="block"
-    pause2.style.display="none"
-    sad.innerText="unforgiven2 playing"
-    sad.style.display="block" 
-document.body.style.backgroundColor="darkgray"
-
-    
-
-})
-
-btn46.addEventListener('click',function(){
-    s1.playbackRate=3
-    unf.playbackRate=3
-})
-
-forward.addEventListener('click',function nextsong(){
-    audioelem.pause()
-    unf.play()
-    playing.style.display="block"
-    pause2.style.display="none"
-
-})
 
 btn.addEventListener('click',function playhandler() {
     audioelem.play()
@@ -191,12 +37,6 @@ btn.addEventListener('click',function playhandler() {
 )
 btn2.addEventListener('click',function pausehandler() {
     audioelem.pause()
-    unf.pause()
-    playing.style.display="none"
-pause2.style.display="block"
-sad.style.display="none" 
-document.body.style.backgroundColor="white"
-
  }
 )
 btn3.addEventListener('click',function durationhandler() {
