@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+        }
+        img{
+            width: 160px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+          padding: 170px;
+        }
+    </style>
+</head>
+<body>
+   <h1>list</h1>
+    <div id="container">
+    <div>
+        <img id="i1" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Amitjakhu-Drip-Dots-3.512-300x300.png" alt="">
+        <i data-name="n1"></i>
+        <audio data-name="n1" src="https://dl.dibasmusic.com/dl/1401/09/Metallica-Fade-To-Black-dibamusics.com-320.mp3"></audio>
+    </div>
+    <div>
+        <img id="i2" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Iconsmind-Outline-Basket-Ball.512-300x300.png" alt="">
+        <i data-name="n2"></i><audio data-name="n2" src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
+
+    </div>
+    <div>
+        <img id="i3" src="https://amireshraghi.ir/wp-content/uploads/2023/10/book-icon-2-300x300.png" alt="">
+        <i data-name="n3"></i>
+        <audio data-name="n3" src="https://cdn.musicgitar.ir/Music/Shadmehr%20Aghili/320/Shadmehr%20Aghili%20-%20Chera%20Too%20Jangi%20[320].mp3"></audio>
+
+    </div>
+    <div>
+        <img id="i4" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Iconsmind-Outline-Light-Bulb.512-300x300.png" alt="">
+        <i data-name="n4"></i>
+        <audio data-name="n4" src="https://cdn.musicgitar.ir/Music/Shadmehr%20Aghili/320/Shadmehr%20Aghili%20-%20Door%20Shodi%20[320].mp3"></audio>
+
+    </div>
+</div>
+<br><br><br>
+<p id="result"></p>
+
+
+
+<script>
+    let result=document.getElementById("result")
+let i1=document.getElementById("i1")
+let i2=document.getElementById("i2")
+let i3=document.getElementById("i3")
+let i4=document.getElementById("i4")
+let audioelem=document.querySelectorAll('audio')
+console.log(audioelem);
+i1.addEventListener('click',function(){
+audioelem[0].play()
+result.innerHTML="n1 is playing"
+})
+
+i2.addEventListener('click',function(){
+audioelem[1].play()
+result.innerHTML="n2 is playing"
+})
+
+</script>
+</body>
+</html>
+
