@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
@@ -15,36 +16,46 @@
             width: 160px;
             margin: 20px;
             cursor: pointer;
+            z-index: 1;
+        }
+        img:hover{
+            background-color: aqua;
         }
         h1{
             text-align: center;
           padding: 170px;
+          
+        }
+        i{
+        
         }
     </style>
 </head>
 <body>
    <h1>list</h1>
+   <!-- <i data-name="n1" class="fa fa-play" style="font-size:48px;color:red"></i> -->
+
     <div id="container">
     <div>
         <img id="i1" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Amitjakhu-Drip-Dots-3.512-300x300.png" alt="">
-        <i data-name="n1"></i>
+        <i data-name="n1" ></i>
         <audio data-name="n1" src="https://dl.dibasmusic.com/dl/1401/09/Metallica-Fade-To-Black-dibamusics.com-320.mp3"></audio>
     </div>
     <div>
         <img id="i2" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Iconsmind-Outline-Basket-Ball.512-300x300.png" alt="">
-        <i data-name="n2"></i><audio data-name="n2" src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
+        <i  data-name="n2"></i><audio data-name="n2" src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
 
     </div>
     <div>
         <img id="i3" src="https://amireshraghi.ir/wp-content/uploads/2023/10/book-icon-2-300x300.png" alt="">
         <i data-name="n3"></i>
-        <audio data-name="n3" src="https://cdn.musicgitar.ir/Music/Shadmehr%20Aghili/320/Shadmehr%20Aghili%20-%20Chera%20Too%20Jangi%20[320].mp3"></audio>
+        <audio data-name="n3" src="https://dl.musicsbaran.ir/Musicbaran/Artist2/Linkin%20Park/Linkin%20Park%20-%20Essentials-%5B320%5D/07.%20Faint.mp3"></audio>
 
     </div>
     <div>
         <img id="i4" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Iconsmind-Outline-Light-Bulb.512-300x300.png" alt="">
         <i data-name="n4"></i>
-        <audio data-name="n4" src="https://cdn.musicgitar.ir/Music/Shadmehr%20Aghili/320/Shadmehr%20Aghili%20-%20Door%20Shodi%20[320].mp3"></audio>
+        <audio data-name="n4" src="https://dl.musicsbaran.ir/Musicbaran/Artist2/Linkin%20Park/Linkin%20Park%20-%20Essentials-%5B320%5D/20.%20Iridescent.mp3"></audio>
 
     </div>
 </div>
@@ -63,12 +74,35 @@ let audioelem=document.querySelectorAll('audio')
 console.log(audioelem);
 i1.addEventListener('click',function(){
 audioelem[0].play()
+audioelem[1].pause()
+audioelem[2].pause()
+audioelem[3].pause()
+
 result.innerHTML="n1 is playing"
 })
 
 i2.addEventListener('click',function(){
 audioelem[1].play()
+audioelem[0].pause()
+audioelem[2].pause()
+audioelem[3].pause()
 result.innerHTML="n2 is playing"
+})
+
+i3.addEventListener('click',function(){
+audioelem[2].play()
+audioelem[0].pause()
+audioelem[1].pause()
+audioelem[3].pause()
+result.innerHTML="n3 is playing"
+})
+
+i4.addEventListener('click',function(){
+audioelem[3].play()
+audioelem[0].pause()
+audioelem[2].pause()
+audioelem[1].pause()
+result.innerHTML="n4 is playing"
 })
 
 </script>
