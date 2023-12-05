@@ -26,7 +26,11 @@
           padding: 170px;
           
         }
-        i{
+        #im1{
+            display: none;
+        }
+        #im1:hover{
+            display: block;
         
         }
     </style>
@@ -38,23 +42,23 @@
     <div id="container">
     <div>
         <img id="i1" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Amitjakhu-Drip-Dots-3.512-300x300.png" alt="">
-        <i style="text-align: center; margin-left: 40%; margin-top: -70px; color: red; font-size: 30px;" data-name="n1" class="fa fa-play"></i>
+        <i id="im1" style="text-align: center; margin-left: 40%; margin-top: -70px; color: red; font-size: 30px;"  class="fa fa-play" data-name="n1"></i>
         <audio data-name="n1" src="https://dl.dibasmusic.com/dl/1401/09/Metallica-Fade-To-Black-dibamusics.com-320.mp3"></audio>
     </div>
     <div>
         <img id="i2" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Iconsmind-Outline-Basket-Ball.512-300x300.png" alt="">
-        <i class="fa fa-play"  data-name="n2"></i><audio data-name="n2" src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
+        <i id="im2" style="text-align: center; margin-left: 40%; margin-top: -70px; color: red; font-size: 30px;"  class="fa fa-play"  data-name="n2"></i><audio data-name="n2" src="https://amireshraghi.ir/wp-content/uploads/2023/12/SaveTube.io-Ludovico-Einaudi-Divenire-HD-320-kbps.mp3"></audio>
 
     </div>
     <div>
         <img id="i3" src="https://amireshraghi.ir/wp-content/uploads/2023/10/book-icon-2-300x300.png" alt="">
-        <i class="fa fa-play" data-name="n3"></i>
+        <i id="im3" style="text-align: center; margin-left: 40%; margin-top: -70px; color: red; font-size: 30px;"  class="fa fa-play" data-name="n3"></i>
         <audio data-name="n3" src="https://dl.musicsbaran.ir/Musicbaran/Artist2/Linkin%20Park/Linkin%20Park%20-%20Essentials-%5B320%5D/07.%20Faint.mp3"></audio>
 
     </div>
     <div>
         <img id="i4" src="https://amireshraghi.ir/wp-content/uploads/2023/10/Iconsmind-Outline-Light-Bulb.512-300x300.png" alt="">
-        <i class="fa fa-play" data-name="n4"></i>
+        <i id="im4" style="text-align: center; margin-left: 40%; margin-top: -70px; color: red; font-size: 30px;"  class="fa fa-play" data-name="n4"></i>
         <audio data-name="n4" src="https://dl.musicsbaran.ir/Musicbaran/Artist2/Linkin%20Park/Linkin%20Park%20-%20Essentials-%5B320%5D/20.%20Iridescent.mp3"></audio>
 
     </div>
@@ -71,6 +75,7 @@ let i2=document.getElementById("i2")
 let i3=document.getElementById("i3")
 let i4=document.getElementById("i4")
 let audioelem=document.querySelectorAll('audio')
+let im1=document.getElementById("im1")
 console.log(audioelem);
 i1.addEventListener('click',function(){
 audioelem[0].play()
@@ -80,7 +85,14 @@ audioelem[3].pause()
 
 result.innerHTML="n1 is playing"
 })
+i1.addEventListener('mouseover',function(){
+im1.style.display="block"
 
+})
+i1.addEventListener('mouseout',function(){
+im1.style.display="none"
+
+})
 i2.addEventListener('click',function(){
 audioelem[1].play()
 audioelem[0].pause()
