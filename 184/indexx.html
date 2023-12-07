@@ -314,6 +314,7 @@ font-size: 20px;
                      <p>
                          <!-- dfsfsd -->
                         </p> 
+                   
         </div>
                  <hr>
 
@@ -369,7 +370,7 @@ let addtodo=document.getElementById("addtodo")
 let newbox=document.getElementById("newbox")
 let container2=document.querySelector(".container2")
 btn.addEventListener('click',function(){
-    console.log(mytext.value);
+    // console.log(mytext.value);
     if(mytext.value==""){
     alert("emptytext")
 }
@@ -383,7 +384,7 @@ newdiv.style.marginTop='5px'
 let newi=document.createElement('i')
 newi.className='fa fa-close'
 newi.style.float="right"
-
+newi.id=mytext.value
 newdiv.append(newi)
 my1.append(newdiv)
 
@@ -395,13 +396,12 @@ newdiv.draggable=true
 newdiv.ondragstart=dragstarthandler(event)
 let box=document.getElementById("box")
     function dragstarthandler(event){
-console.log(event.dataTransfer);
+console.log(newi.id);
 
 event.dataTransfer.setData('elemid',event.target.id)
     }
 
     function drophandler(){
-        console.log(event.dataTransfer.getData('elemid'));
 box.innerHTML=event.dataTransfer.getData('elemid')
     }
     function dragoverhandler(event){
