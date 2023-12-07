@@ -390,10 +390,26 @@ my1.append(newdiv)
 newi.addEventListener('click',function(){
     newdiv.remove()
 })
+// ------------------------------------------------------------------------------------------drags
+newdiv.draggable=true
+newdiv.ondragstart=dragstarthandler(event)
+let box=document.getElementById("box")
+    function dragstarthandler(event){
+console.log(event.dataTransfer);
 
+event.dataTransfer.setData('elemid',event.target.id)
+    }
 
+    function drophandler(){
+        console.log(event.dataTransfer.getData('elemid'));
+box.innerHTML=event.dataTransfer.getData('elemid')
+    }
+    function dragoverhandler(event){
+event.preventDefault()
+    }
 
 }
+// ------------------------------------------------------------------------------------------drags
 
 
 
