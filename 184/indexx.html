@@ -1,0 +1,410 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
+
+
+
+.container {
+	width: 180px;
+	display: flex;
+	justify-content: space-around;
+    background-color: #1eff45;
+}
+.container .btn {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 20px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container .btn a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	color: #fff;
+	font-weight: 400px;
+	z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+}
+.container .btn:hover a {
+	letter-spacing: 3px;
+}
+.container .btn a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+	transform: skewX(45deg) translate(0);
+	transition: 0.5s;
+	filter: blur(0px);
+}
+.container .btn:hover a::before {
+	transform: skewX(45deg) translate(200px);
+}
+.container .btn::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .btn:hover::before /*lightup button*/ {
+	bottom: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+
+.container .btn::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	top: -5px;
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .btn:hover::after /*lightup button*/ {
+	top: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+.container .btn:nth-child(1)::before, /*chnage 1*/
+.container .btn:nth-child(1)::after {
+	background: #ff1f71;
+	box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71,
+		0 0 60px #ff1f71;
+}
+.container .btn:nth-child(2)::before, /* 2*/
+.container .btn:nth-child(2)::after {
+	background: #2db2ff;
+	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
+		0 0 60px #2db2ff;
+}
+.container .btn:nth-child(3)::before, /* 3*/
+.container .btn:nth-child(3)::after {
+	background: #1eff45;
+	box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
+		0 0 60px #1eff45;
+}
+
+
+
+
+
+
+
+
+        .container2{
+      display: inline-flex;
+      position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: azure;
+margin-top: 200px;
+        }
+#newbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 150px;
+    background-color: blanchedalmond;
+    display: none;
+    border-radius: 7px;
+}
+
+        #my1, #my2, #my3, #my4{
+            height: 70px;
+            padding-right: 15px;
+            padding-left: 15px;
+font-size: 20px;
+            height: 500px;
+        }
+        .demo .token {
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+.token {
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #e0e0e0;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(66, 66, 66, 0.7);
+  border-radius: 16px;
+  border-bottom: 2px solid lightgray;
+  overflow: hidden;
+  z-index: 1;
+}
+.token:after {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  content: "";
+  width: 100%;
+  height: 36px;
+  background-color: lightgray;
+  z-index: -1;
+  transition: transform 0.3s;
+}
+.token:hover:after {
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+.token--blue {
+  background-color: #0277bd;
+  border-color: #0267a4;
+  color: white;
+}
+.token--blue:after {
+  background-color: #0267a4;
+}
+.token--pink {
+  background-color: #f50057;
+  border-color: #dc004e;
+  color: white;
+}
+.token--pink:after {
+  background-color: #dc004e;
+}
+.token--icon {
+  padding-left: 43px;
+}
+.token.is-close {
+  display: none;
+}
+.token i {
+  font-size: 16px;
+  line-height: 32px;
+}
+.token .icon-clear {
+  float: right;
+  padding-left: 8px;
+  cursor: pointer;
+}
+.token .icon-left {
+  position: absolute;
+  left: 0;
+  color: white;
+  border-radius: 16px;
+  background-color: #212121;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.token .icon-left:hover {
+  -webkit-animation: ease spin 0.5s;
+          animation: ease spin 0.5s;
+}
+.token img {
+  float: left;
+  margin: 0 8px 0 -12px;
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+.token img:hover {
+  -webkit-animation: ease spin 0.5s;
+          animation: ease spin 0.5s;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container2">
+        <div id="my1">not status
+            <hr><button id="addtodo">+ Add Todo</button>
+            <br><br>
+            <div  class="token token--blue">
+                Tag sda blue
+                <i class="fa fa-close"></i>
+            </div>
+        </div>
+        <hr>
+        <div id="my2">not started
+                     <hr>
+
+                     <br>
+                     <p>
+                         <!-- dfsfsd -->
+                        </p> 
+        </div>
+                 <hr>
+
+
+        <div id="my3">in progress
+                     <hr>
+
+                     <br>
+                     <p>
+                         <!-- dfsfsd -->
+                        </p> 
+        </div>
+                 <hr>
+
+
+        <div id="my4">completed
+                     <hr>
+
+                     <br>
+                     <p>
+                         <!-- dfsfsd -->
+                        </p> 
+        </div>
+	
+    </div>
+    <div id="newbox"><span style="text-align: center;">add to do</span>  <i id="myi" style="float: right;" class="fa fa-close"></i><hr> <textarea id="mytext" style="width: 180px; height: 20px;" name="" id="" cols="30" rows="10"></textarea>
+    <br><br>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Glassmorphism button</title>
+    </head>
+    
+   
+        <div class="container">
+            <div id="btn" class="btn"><a href="#">Add</a>
+    
+        </div>		
+    
+    
+
+    </div>
+<!-- ------------------------------------------------------------------------- -->
+    <script>
+        let mytext=document.getElementById("mytext")
+let fafaclose=document.querySelector("#myi")
+// console.log(fafaclose);
+let btn=document.getElementById("btn")
+
+let addtodo=document.getElementById("addtodo")
+let newbox=document.getElementById("newbox")
+let container2=document.querySelector(".container2")
+btn.addEventListener('click',function(){
+    console.log(mytext.value);
+    
+
+})
+
+addtodo.addEventListener('click',function(){
+    // console.log(container2)
+    newbox.style.display="block"
+container2.style.filter="blur(2px)"
+})
+
+
+fafaclose.addEventListener('click',function(){
+    newbox.style.display="none"
+container2.style.filter="blur(0px)"
+    
+})
+// filter: blur(10px);
+
+
+
+// for close button
+        (function() {
+  'use strict';
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var close = this.querySelectorAll('.fa-close'); 
+
+    for (var i = 0; i < close.length; i++) {
+      close[i].addEventListener('click', function(event) {
+        this.parentNode.classList.add('is-close');
+      });
+    }
+		
+  });
+}());
+    </script>
+</body>
+</html>
