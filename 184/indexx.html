@@ -306,7 +306,9 @@ font-size: 20px;
             <div  class="token token--blue">
                 Tag sda blue
                 <i class="fa fa-close"></i>
+                
             </div>
+          
         </div>
         <hr>
         <div id="my2">not started
@@ -361,6 +363,7 @@ font-size: 20px;
     </div>
 <!-- ------------------------------------------------------------------------- -->
     <script>
+        let my1=document.getElementById("my1")
         let mytext=document.getElementById("mytext")
 let fafaclose=document.querySelector("#myi")
 // console.log(fafaclose);
@@ -371,7 +374,31 @@ let newbox=document.getElementById("newbox")
 let container2=document.querySelector(".container2")
 btn.addEventListener('click',function(){
     console.log(mytext.value);
-    
+    if(mytext.value==""){
+    alert("emptytext")
+}
+else{
+let newdiv=document.createElement('div')
+newdiv.innerText=mytext.value
+newdiv.className='token token--blue'
+newdiv.style.display="block"
+newdiv.style.marginTop='5px'
+
+let newi=document.createElement('i')
+newi.className='fa fa-close'
+
+newdiv.append(newi)
+my1.append(newdiv)
+
+newi.addEventListener('click',function(){
+    newdiv.remove()
+})
+
+
+
+}
+
+
 
 })
 
