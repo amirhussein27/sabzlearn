@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="inter">inter</button>
+    <button id="clear">clear</button>
+    <script>
+let inter=document.getElementById("inter")
+let clear=document.getElementById("clear")
+inter.addEventListener('click',function(){
+    localStorage.setItem("amir",25)
+    localStorage.setItem("ali",26)
+})
+clear.addEventListener('click',function(){
+    localStorage.clear()
+    
+})
+    </script>
+</body>
+</html>

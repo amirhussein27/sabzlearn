@@ -3,6 +3,34 @@ let myUL=document.getElementsByClassName("myUL")
 let container=document.getElementById("container")
 let myul=document.getElementById("myul")
 
+let clear=document.getElementById("clear")
+let saved=document.getElementById("saved")
+
+clear.addEventListener('click',function(){
+    localStorage.clear()
+})
+
+saved.addEventListener('click',function(){
+   let localname= localStorage.getItem( myinp.value)
+   console.log(localname);
+
+   let newdoli=document.createElement('li')
+   newdoli.id="newli"
+   let trash1=document.createElement('li')
+   // console.log(newdotrash);
+   let newhr=document.createElement('hr')
+   let myi=document.getElementsByTagName('li')
+   
+   
+   trash1.className='fa fa-remove'
+   trash1.id="trash"
+   // console.log(trash1);
+   
+   newdoli.innerHTML=localname
+   container.append()
+   
+   myul.append(newdoli,trash1,newhr)
+})
 
 function addnewdo(newdo){
 // console.log(trash);
@@ -10,24 +38,33 @@ function addnewdo(newdo){
 if(myinp.value==""){
     alert("emptytext")
 }
-else{console.log(newdo);
+else{
+    // console.log(newdo);
     let newdoli=document.createElement('li')
     newdoli.id="newli"
     let trash1=document.createElement('li')
     // console.log(newdotrash);
     let newhr=document.createElement('hr')
+    let myi=document.getElementsByTagName('li')
     
     
     trash1.className='fa fa-remove'
     trash1.id="trash"
-    console.log(trash1);
+    // console.log(trash1);
     
     newdoli.innerHTML=newdo
     container.append()
     
     myul.append(newdoli,trash1,newhr)
-    
-    
+
+    // console.log( myi.length/2);
+   
+    // console.log(myinp.value);
+    localStorage.setItem( myinp.value
+    ,myinp.value)
+
+
+
     trash1.addEventListener('click',function(){
         newdoli.remove()
         trash1.remove()
