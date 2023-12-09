@@ -20,16 +20,32 @@ saved.addEventListener('click',function(){
    // console.log(newdotrash);
    let newhr=document.createElement('hr')
    let myi=document.getElementsByTagName('li')
+
+
+//    a function that show all localtorages from internet
+   function allStorage() {
+
+    var values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        values.push( localStorage.getItem(keys[i]) );
+        
+    }
+
+    return values;
+}
+  alert(allStorage())
+//    newdoli.innerText=allStorage()
    
+//    trash1.className='fa fa-remove'
+//    trash1.id="trash"
+//    // console.log(trash1);
    
-   trash1.className='fa fa-remove'
-   trash1.id="trash"
-   // console.log(trash1);
+//    container.append()
    
-   newdoli.innerHTML=localname
-   container.append()
-   
-   myul.append(newdoli,trash1,newhr)
+//    myul.append(newdoli,trash1,newhr)
 })
 
 function addnewdo(newdo){
@@ -109,3 +125,4 @@ addnewdo(newdo)
 
         })
   
+

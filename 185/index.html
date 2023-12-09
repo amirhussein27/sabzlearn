@@ -6,10 +6,16 @@
 </head>
 <body>
     <button id="inter">inter</button>
+    <button id="names">names</button>
+    
     <button id="clear">clear</button>
     <script>
+        localStorage.setItem("esmha",["hava","hasan","havij"])
+
 let inter=document.getElementById("inter")
 let clear=document.getElementById("clear")
+let names=document.getElementById("names")
+
 inter.addEventListener('click',function(){
     localStorage.setItem("amir",25)
     localStorage.setItem("ali",26)
@@ -17,6 +23,11 @@ inter.addEventListener('click',function(){
 clear.addEventListener('click',function(){
     localStorage.clear()
     
+})
+names,addEventListener('click',function(){
+    localStorage.getItem("esmha")
+    let chideman='<li>'+"hi"+'</li>'
+    document.write(chideman)
 })
     </script>
 </body>
