@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myb{
+            background-color: bisque;
+        }
+        .dark{
+            background-color: gray;
+
+        }
+
+    </style>
+</head>
+<body class="myb">
+    <button id="btn" value="light">light</button>
+
+    <script>
+        let btn=document.getElementById("btn")
+let myb=document.getElementsByClassName("myb")
+        if(localStorage.getItem("mode")=="light"){
+            console.log("light");
+            btn.innerHTML="light"
+        btn.value="light"
+        document.body.classList.replace("dark","myb")
+        }
+        else{
+            console.log("dark");
+            btn.innerHTML="dark"
+        btn.value="dark"
+        
+        document.body.classList.replace("myb","dark")
+        }
+
+// console.log(document.body.className);
+
+btn.addEventListener('click',function(){
+    if(btn.value=="light"){
+        btn.innerHTML="dark"
+        btn.value="dark"
+        
+        document.body.classList.replace("myb","dark")
+        localStorage.setItem("mode","dark")
+    }
+    else{
+        btn.innerHTML="light"
+        btn.value="light"
+        document.body.classList.replace("dark","myb")
+        localStorage.setItem("mode","light")
+
+    }
+})
+    </script>
+</body>
+</html>
