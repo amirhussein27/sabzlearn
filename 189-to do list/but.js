@@ -11,13 +11,13 @@ clear.addEventListener('click',function(){
 saved.addEventListener('click',function(){
    let localname= localStorage.getItem( myinp.value)
    console.log(localname);
+function reloading(){
+    console.log(localname.allStorage.value);
+}
+  
+   
+   // newdoli.innerHTML=localStorage.getItem("name")
 
-   let newdoli=document.createElement('li')
-   newdoli.id="newli"
-   let trash1=document.createElement('li')
-   // console.log(newdotrash);
-   let newhr=document.createElement('hr')
-   let myi=document.getElementsByTagName('li')
 
 
 //    a function that show all localtorages from internet
@@ -53,9 +53,11 @@ if(myinp.value==""){
     alert("emptytext")
 }
 else{
+    let todoaray=[]
+
     // console.log(newdo);
     let newdoli=document.createElement('li')
-    newdoli.id="newli"
+    newdoli.id=todoaray.length+1
     let trash1=document.createElement('li')
     // console.log(newdotrash);
     let newhr=document.createElement('hr')
@@ -67,6 +69,7 @@ else{
     // console.log(trash1);
     
     newdoli.innerHTML=newdo
+    
     // newdoli.innerHTML=localStorage.getItem("name")
 console.log(localStorage.getItem("name"));
     container.append()
@@ -78,7 +81,7 @@ console.log(localStorage.getItem("name"));
     // console.log(myinp.value);
     // localStorage.setItem( [{content:myinp.value,status:"complete"},{content:myinp.value,status:"incomplete"}]
     
-[{content:myinp.value,status:"complete"},{content:myinp.value,status:"incomplete"}]
+// [{content:myinp.value,status:"complete"},{content:myinp.value,status:"incomplete"}]
 
 
     trash1.addEventListener('click',function(){
@@ -120,10 +123,15 @@ let newdo=myinp.value
     // console.log("object");
 
     // console.log(event.keyCode);
+    localStorage.setItem('todos',JSON.stringify(myinp.value))
 
 
 addnewdo(newdo)
 
         })
-  
+      function getLocalStorage(){
+let localstoragetodos=JSON.parse(localStorage.getItem('todos'))
+console.log(localstoragetodos);    
+}
 
+        window.addEventListener('load',getLocalStorage)
