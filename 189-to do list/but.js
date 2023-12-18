@@ -4,9 +4,12 @@ let container=document.getElementById("container")
 let myul=document.getElementById("myul")
 let clear=document.getElementById("clear")
 let saved=document.getElementById("saved")
+let todoaray=[]
+
 clear.addEventListener('click',function(){
     localStorage.clear()
 })
+
 
 saved.addEventListener('click',function(){
    let localname= localStorage.getItem( myinp.value)
@@ -53,7 +56,6 @@ if(myinp.value==""){
     alert("emptytext")
 }
 else{
-    let todoaray=[]
 
     // console.log(newdo);
     let newdoli=document.createElement('li')
@@ -83,6 +85,10 @@ console.log(localStorage.getItem("name"));
     
 // [{content:myinp.value,status:"complete"},{content:myinp.value,status:"incomplete"}]
 
+let newtodoobj={
+    id: todoaray.length + 1
+}
+console.log(newtodoobj);
 
     trash1.addEventListener('click',function(){
         newdoli.remove()

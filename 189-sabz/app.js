@@ -2,11 +2,16 @@ let addButton=document.getElementById("addButton")
 let clearButton=document.getElementById("clearButton")
 let myul=document.getElementsByTagName("todoList")
 let itemInput=document.getElementById("itemInput")
+let completedwell=document.getElementsByClassName('completed well')
 // li and ul
 let todoarray=[]
 
 function addnew(){
  
+    if (itemInput.value==""){
+        alert("empty")
+    }
+    else{
     // let newlabel=document.createElement('label')
     let myinp=itemInput.value
 
@@ -36,8 +41,15 @@ function addnew(){
 
     // console.log(newbtn2);
     
+ 
+
 newli.append(newlabel,newbtn,newbtn2)
-console.log(newli);
+// console.log(newli);
+clearButton.addEventListener('click',function(){
+    localStorage.clear()
+// console.log(completedwell);
+newli.remove()
+})
 
 let myul=document.getElementById("todoList")
 myul.append(newli)
@@ -49,11 +61,11 @@ myul.append(newli)
   
     // good ux
     itemInput.value=''
-
+    console.log(todoarray);
+}
     }
     function todogenerator(todoarray){
         todoarray.forEach(function(todo){
-            console.log(todo);
         })
     }
     function setlocalstorage(todoarray){
