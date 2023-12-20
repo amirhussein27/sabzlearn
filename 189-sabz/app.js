@@ -9,6 +9,9 @@ let result=document.getElementById("result")
 let todoarray=[]
 let container=document.getElementById("container")
 let myh2=document.getElementById("myh2")
+let complete=document.getElementsByClassName('btn btn-success')
+console.log(complete);
+
 function addnew(){
  
     if (itemInput.value==""){
@@ -169,4 +172,5 @@ newbtnz4.innerText="Delete"
 newlis4.append(newlabels4,newbtns4,newbtnz4)
 myful.append(newlis4)
     }
+    
 // -----------------------------------------------------
