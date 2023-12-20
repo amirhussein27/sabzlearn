@@ -132,5 +132,41 @@ newbtnz2.innerText="Delete"
 
 newlis2.append(newlabels2,newbtns2,newbtnz2)
 myful.append(newlis2)
+
+let newlabels3=document.createElement('label')
+newlabels3.innerHTML=three
+
+let newlis3=document.createElement('li')
+newlis3.className="completed well"
+
+let newbtns3=document.createElement('button')
+newbtns3.className="btn btn-success"
+newbtns3.innerText="Complete"
+
+let newbtnz3=document.createElement('button')
+newbtnz3.className="btn btn-danger"
+newbtnz3.innerText="Delete"
+
+
+newlis3.append(newlabels3,newbtns3,newbtnz3)
+myful.append(newlis3)
+
+let newlabels4=document.createElement('label')
+newlabels4.innerHTML=four
+
+let newlis4=document.createElement('li')
+newlis4.className="completed well"
+
+let newbtns4=document.createElement('button')
+newbtns4.className="btn btn-success"
+newbtns4.innerText="Complete"
+
+let newbtnz4=document.createElement('button')
+newbtnz4.className="btn btn-danger"
+newbtnz4.innerText="Delete"
+
+
+newlis4.append(newlabels4,newbtns4,newbtnz4)
+myful.append(newlis4)
     }
 // -----------------------------------------------------
