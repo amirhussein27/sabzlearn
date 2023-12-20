@@ -1,11 +1,14 @@
 let addButton=document.getElementById("addButton")
 let clearButton=document.getElementById("clearButton")
 let myul=document.getElementsByTagName("todoList")
+let myful=document.getElementById("todoList")
 let itemInput=document.getElementById("itemInput")
 let completedwell=document.getElementsByClassName('completed well')
 // li and ul
+let result=document.getElementById("result")
 let todoarray=[]
-
+let container=document.getElementById("container")
+let myh2=document.getElementById("myh2")
 function addnew(){
  
     if (itemInput.value==""){
@@ -56,22 +59,78 @@ myul.append(newli)
     todoarray.push(newtodoobj)
     // console.log(todoarray);
     // newlabel.innerHTML=itemInput.value
-    setlocalstorage(todoarray)
-    todogenerator(todoarray)
+
   
-    // good ux
+    // good uxdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+localStorage.setItem(newtodoobj.id,newtodoobj.title)
+
+
+
+    // good uxdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+
     itemInput.value=''
-    console.log(todoarray);
+    console.log(newtodoobj.title);
 }
     }
-    function todogenerator(todoarray){
-        todoarray.forEach(function(todo){
-        })
-    }
-    function setlocalstorage(todoarray){
-localStorage.setItem('todos',JSON.stringify(todoarray))
-    }
+  
 addButton.addEventListener('click',addnew)
 
 clearButton.addEventListener('click',function(){
     localStorage.clear()})
+
+
+    function hi(){
+    let myinp=itemInput.value
+
+        let newtodoobj={
+            id:todoarray.length + 1,
+            title:myinp.value,
+            complete:false
+        }
+
+
+// newp=document.createElement('label')
+let one=localStorage.getItem(1)
+let two=localStorage.getItem(2)
+let three=localStorage.getItem(3)
+let four=localStorage.getItem(4)
+
+        let newlabels=document.createElement('label')
+        newlabels.innerHTML=one
+
+        let newlis=document.createElement('li')
+    newlis.className="completed well"
+    
+    let newbtns=document.createElement('button')
+    newbtns.className="btn btn-success"
+    newbtns.innerText="Complete"
+
+    let newbtnz=document.createElement('button')
+    newbtnz.className="btn btn-danger"
+    newbtnz.innerText="Delete"
+     
+    
+    newlis.append(newlabels,newbtns,newbtnz)
+    myful.append(newlis)
+    console.log(newlis);
+    
+
+    let newlabels2=document.createElement('label')
+    newlabels2.innerHTML=two
+
+    let newlis2=document.createElement('li')
+newlis2.className="completed well"
+
+let newbtns2=document.createElement('button')
+newbtns2.className="btn btn-success"
+newbtns2.innerText="Complete"
+
+let newbtnz2=document.createElement('button')
+newbtnz2.className="btn btn-danger"
+newbtnz2.innerText="Delete"
+ 
+
+newlis2.append(newlabels2,newbtns2,newbtnz2)
+myful.append(newlis2)
+    }
+// -----------------------------------------------------
