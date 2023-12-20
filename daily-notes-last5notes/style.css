@@ -8,7 +8,7 @@ body {
   }
   .wrapper {
     width: 400px;
-    height: 200px;
+    height: 60px;
     max-width: calc(100% - 10px);
     background: white;
     padding: 5px;

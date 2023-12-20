@@ -16,7 +16,7 @@ function hi(){
     id:array.length+1,
     title:myinp.value
   }
-  array.push(myobj)
+
   // console.log(myobj.id);
   // console.log(myobj.title);
   // console.log(array);
@@ -28,6 +28,8 @@ function hi(){
   newp.innerHTML=myobj.title
   // console.log(newp);
   myp.append(newp)
+  array.push(myobj)
+  myinp.value=""
 }
 
 mybtn.addEventListener('click',hi)
@@ -35,7 +37,7 @@ mybtn.addEventListener('click',hi)
 function ti(){
   console.log("object");
   let newp=document.createElement('p')
-  localStorage.setItem(myobj.id,myobj.title)
+  // localStorage.setItem(myobj.id,myobj.title)
  
 
   newp.innerHTML=localStorage.getItem(1) +"-"+ localStorage.getItem(2)
