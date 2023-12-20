@@ -30,6 +30,13 @@ body {
     float: right;
     cursor: pointer;
   }
+  .del{
+    background: rgb(223, 10, 10);
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+  }
   .save:hover {
     background: #23ce23;
   }
