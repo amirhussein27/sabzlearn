@@ -44,7 +44,8 @@ function addnew(){
     let newbtn2=document.createElement('button')
     newbtn2.className="btn btn-danger"
     newbtn2.innerText="Delete"
-
+    newbtn2.setAttribute('onclick',removetodo('+newtodoobj.id+'))
+    console.log(newtodoobj.id);
     // console.log(newbtn2);
     
  
