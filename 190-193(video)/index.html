@@ -12,7 +12,7 @@
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
   </head>
-  <body>
+  <body onload="hi()">
     <div class="container">
       <h2 class="text-center">Todo List App</h2>
 
@@ -22,6 +22,8 @@
       </div>
       <button id="addButton" class="btn btn-primary">Add To List</button>
       <button id="clearButton" class="btn btn-danger">Clear Todo List</button>
+      <button id="localbtn" class="btn btn-danger">Clear localstorage</button>
+      
       <h3>Todo List</h3>
       <ul id="todoList">
         <!-- <li class="completed well"> uncompleted for uncompleted todos -->
