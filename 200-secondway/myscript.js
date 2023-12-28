@@ -40,3 +40,5 @@ function prev(){
 
 prevbutton.addEventListener('click',prev)
 nexbutton.addEventListener('click',next)
+
+setInterval(next,2000)
