@@ -6,40 +6,34 @@ let prevbutton=document.getElementById("prev")
 let nexbutton=document.getElementById("next")
 let ended=document.getElementById("ended")
 
-let imagearray=['image/1.jpg','image/2.png','image/3.jpg']
+let imagearray=['image/1.jpg','image/2.png','image/3.jpg','image/4.jpg']
 let imagearraylength=imagearray.length
 let imgindex=0
-console.log(ended);
+// console.log(ended);
 
 function next(){
     imgindex++
+    if(imgindex>imagearraylength-1){
+        imgindex=0
+      }
     imgelem.setAttribute('src',imagearray[imgindex])
-    if(imgindex<imagearraylength){
-        console.log(imgindex);
+console.log(imgindex);
 
-    }
-    else{
-        alert("pics ended")
+  
 
-
-
-
-    }
     // console.log(imgindex);
 }
 
 function prev(){
     imgindex--
-    imgelem.setAttribute('src',imagearray[imgindex])
-
     if(imgindex<0){
-        alert("pics ended")
-      
+    
+        imgindex=imagearraylength-1
     }
-    else{
-        console.log(imgindex);
 
-    }
+    imgelem.setAttribute('src',imagearray[imgindex])
+    console.log(imgindex);
+  
     // console.log(imgindex);
 
 }
