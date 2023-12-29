@@ -5,6 +5,7 @@ let result2=document.getElementById("result2")
 let bmi=document.getElementById("bmi")
 let result3=document.getElementById("result3")
 let mybtn=document.getElementById("mybtn")
+let result4=document.getElementById("result4")
 console.log(result3.value);
 
 myinp1.addEventListener('change',function(event){
@@ -35,5 +36,8 @@ console.log(newkg);
 // فرمول نهایی
 let final=newkg/(newcm*newcm/10000)
 console.log(final);
-result3.innerHTML=final
+result3.innerHTML=Math.floor(final)
+if(final<18.5){
+    alert("low weight")
+}
 }
