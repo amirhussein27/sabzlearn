@@ -1,0 +1,60 @@
+body{
+    background-image: linear-gradient(to right,lightgreen,green);
+}
+.container{
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 3%;
+}
+#myinp1{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#myinp2{
+
+    background-color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#height{
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+}
+#weight{
+    background-color: white;
+    position: absolute;
+    top: 55%;
+    left: 27%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+
+}
+
+#result1{
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+}
+#result2{
+    background-color: white;
+    position: absolute;
+    top: 55%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+}
