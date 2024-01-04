@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --test-color:red;
+        }
+  
+        h1{
+      color: var(--test-color);
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="test">sadsa</h1>
+    <h2></h2>
+    <button id="mybtn">change color</button>
+    <script>
+        function changecolor(){
+            document.documentElement.style.setProperty('--test-color','green')
+            console.log(document.documentElement.style.getPropertyValue('--test-color'));
+        }
+let mybtn=document.getElementById("mybtn")
+mybtn.addEventListener('click',changecolor)
+    </script>
+</body>
+</html>
