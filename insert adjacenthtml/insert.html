@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add">addme</button>
+    <h1>hi</h1>
+    <p id="myp">this is text</p>
+
+    <script>
+let add=document.getElementById("add")
+let myp=document.getElementById("myp")
+let mynewp="<p>newp</p>";
+add.addEventListener('click',function(){
+    console.log("object");
+    myp.insertAdjacentHTML("beforeBegin",mynewp)
+})
+    </script>
+</body>
+</html>
