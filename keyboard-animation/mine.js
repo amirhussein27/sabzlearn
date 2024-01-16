@@ -12,4 +12,27 @@ document.addEventListener('keyup',function(event){
     else{
         myp.innerHTML+=event.key
     }
+    
 })
+document.addEventListener('keyup',function(event){
+    console.log(event.key);
+
+    if(event.key="s"){
+        console.log("u pressed s");
+    
+            myp.style.backgroundColor ="red";
+            setTimeout(removeThing, 2000)
+           
+        
+          
+   
+    }
+    else{
+       
+    }
+    
+})
+function removeThing(event) {
+    myp.style.backgroundColor ="black";
+
+   }

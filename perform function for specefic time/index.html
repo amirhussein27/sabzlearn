@@ -1,0 +1,22 @@
+<style>
+    #spinner {
+        display: none;
+    }
+    </style>
+    <button>Click me</button><br>
+    <div id="spinner">I am a spinner</div>
+    <script>
+    var button = document.querySelector('button');
+    var spinner = document.querySelector('#spinner');
+    
+    function showThing() {
+      button.style.color = 'red';
+      setTimeout(removeThing, 2000)
+    }
+    
+    function removeThing() {
+     button.style.color = 'black';
+    }
+    
+    button.onclick = showThing;
+    </script>
