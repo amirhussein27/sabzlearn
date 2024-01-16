@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --text-color--:red;
+        }
+        body{
+         background-color: var(--text-color--);
+        }
+        #red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    hi whats up
+    <button id="red">red</button>
+  
+    <script>
+        let red=document.getElementById("red")
+        red.addEventListener('click', function changecss(){
+document.documentElement.style.setProperty('--text-color--','blue')
+console.log(document.documentElement.style.getPropertyValue('--text-color--')
+);
+        })
+       
+    </script>
+</body>
+</html>
