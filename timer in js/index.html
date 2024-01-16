@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #countdown{
+        position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+       }
+       #days,#hours,#minutes,#seconds{
+        color: black;
+        margin: 10px 10px;
+        background-color: aqua;
+        padding: 10px 18px;
+        border-radius: 5%;
+       }
+       #countdown {
+    display: flex;
+    gap: 20px;
+    padding: 100px;
+    background-color: aliceblue;
+    justify-content: center;
+}
+
+#countdown > div {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    background: aqua;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <div id="countdown">
+
+    <div id="days">days</div>
+    <div id="hours">hours</div>
+    <div id="minutes">minutes</div>
+    <div id="seconds">seconds</div>
+</div>
+<script>
+
+    function countdown(dateEnd) {
+  var timer, days, hours, minutes, seconds;
+  dateEnd = new Date(dateEnd);
+  dateEnd = dateEnd.getTime();
+  countdown('January 30, 2024 12:00:00');
+  if (isNaN(dateEnd)) {
+    return;
+  }
+  timer = setInterval(calculate, 1000);
+  function calculate() {
+    var dateStart = new Date();
+    dateStart = new Date(
+      dateStart.getUTCFullYear(),
+      dateStart.getUTCMonth(),
+      dateStart.getUTCDate(),
+      dateStart.getUTCHours(),
+      dateStart.getUTCMinutes(),
+      dateStart.getUTCSeconds()
+    );
+    var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000);
+    if (timeRemaining >= 0) {
+      days = parseInt(timeRemaining / 86400);
+      timeRemaining = timeRemaining % 86400;
+      hours = parseInt(timeRemaining / 3600);
+      timeRemaining = timeRemaining % 3600;
+      minutes = parseInt(timeRemaining / 60);
+      timeRemaining = timeRemaining % 60;
+      seconds = parseInt(timeRemaining);
+      document.getElementById("#days > span").innerHTML = parseInt(days, 10);
+      document.querySelector("#hours > span").innerHTML = ("0" + hours).slice(-2);
+      document.querySelector("#minutes > span").innerHTML = ("0" + minutes).slice(-2);
+      document.querySelector("#seconds > span").innerHTML = ("0" + seconds).slice(-2);
+    } else {
+      return;
+    }
+  }
+}
+</script>
+</body>
+</html>

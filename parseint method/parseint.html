@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="myinp">
+    <input type="number" id="myinp2">
+<button id="mybtn">result</button>
+    <p id="result"></p>
+</body>
+<script>
+    let myinp=document.getElementById("myinp")
+    let myinp2=document.getElementById("myinp2")
+    let mybtn=document.getElementById("mybtn")
+    result=document.getElementById("result")
+    mybtn.addEventListener('click',function(){
+        result.innerHTML=parseInt(myinp.value)+parseInt(myinp2.value)
+
+    })
+</script>
+</html>
