@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hi this is default text</p>
+    <div id="hi"></div>
+    <button id="mybtn">create</button>
+
+    <script>
+let mybtn=document.getElementById("mybtn")
+let hi=document.getElementById("hi")
+mybtn.addEventListener('click',function(){
+    let newm=document.createElement("p")
+let newtext=document.createTextNode("this is new text")
+newm.appendChild(newtext)
+hi.appendChild(newm)
+})
+
+    </script>
+</body>
+</html>

@@ -17,15 +17,11 @@ document.addEventListener('keyup',function(event){
 document.addEventListener('keyup',function(event){
     console.log(event.key);
 
-    if(event.key="s"){
+    if(event.key=="s" || event.key=="w" || event.key=="a" || event.key=="d"){
         console.log("u pressed s");
     
-            myp.style.backgroundColor ="red";
-            setTimeout(removeThing, 2000)
-           
-        
-          
-   
+            s.style.backgroundColor ="red";
+            setTimeout(removeThing, 800)
     }
     else{
        
@@ -33,6 +29,5 @@ document.addEventListener('keyup',function(event){
     
 })
 function removeThing(event) {
-    myp.style.backgroundColor ="black";
-
+    s.style.backgroundColor ="black";
    }
