@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<input type="text" name="" id="myinp">
+<button id="mybtn">check</button>
+<button id="clear">clear</button>
+<p id="result"></p>
+<script>
+let myinp=document.getElementById("myinp")
+let mybtn=document.getElementById("mybtn")
+let result=document.getElementById("result")
+let clear=document.getElementById("clear")
+let books=[]
+let getData = (item = null) => {
+        /*
+        * localStorage.getItem(<itemname>) main method 
+        * (predefined method of js) for getting item from localstorage
+        */
+        let data = JSON.parse(localStorage.getItem('mytodo')); 
+        if(data){
+
+            if(item) {
+                if(data.indexOf(item) != -1){
+                    return data[item];
+                }else{
+                    return false;
+                }
+            }
+            return data;
+        }
+        return false;
+    }
+getlocalstorage()
+mybtn.addEventListener('click',function(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+  let a=books.length
+books.push(myobj)
+console.log(myobj.id);
+ let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=myinp.value
+  let data = getData(); // call getdata handler for getting  data from list 
+            data = (data != false) ? data : []; 
+            data.push(item);
+            data = JSON.stringify(data);
+            /*
+            * localStorage.setItem(<itemname>,<itemvalue>) main method 
+            * (predefined method of js) for set item into localstorage
+            */
+            localStorage.setItem('mytodo',data);
+  myinp.value=''
+})
+
+
+function getlocalstorage(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+let localme=localStorage.getItem(localStorage.length)
+let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=localme
+}
+
+
+clear.addEventListener('click',function(){
+  localStorage.clear()
+})
+
+</script>
+</body>
+</html>

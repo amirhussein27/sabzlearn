@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<input type="text" name="" id="myinp">
+<button id="mybtn">check</button>
+<button id="clear">clear</button>
+<p id="result"></p>
+<script>
+let myinp=document.getElementById("myinp")
+let mybtn=document.getElementById("mybtn")
+let result=document.getElementById("result")
+let clear=document.getElementById("clear")
+let books=[]
+getlocalstorage()
+getlocalstorage1()
+getlocalstorage2()
+getlocalstorage3()
+getlocalstorage4()
+mybtn.addEventListener('click',function(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+  let a=books.length
+books.push(myobj)
+console.log(myobj.id);
+ let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=myinp.value
+  localStorage.setItem(myobj.id,myinp.value)
+  myinp.value=''
+})
+
+function getlocalstorage(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+let localme=localStorage.getItem(localStorage.length-5)
+let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=localme
+}
+
+function getlocalstorage1(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+let localme1=localStorage.getItem(localStorage.length-4)
+let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=localme1
+}
+
+function getlocalstorage2(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+let localme2=localStorage.getItem(localStorage.length-3)
+let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=localme2
+}
+
+function getlocalstorage3(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+let localme3=localStorage.getItem(localStorage.length-2)
+let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=localme3
+}
+
+function getlocalstorage4(){
+  let myobj={
+    id:books.length,title:myinp.value
+  }
+let localme4=localStorage.getItem(localStorage.length-1)
+let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=localme4
+}
+
+
+clear.addEventListener('click',function(){
+  localStorage.clear()
+})
+console.log(localStorage.length);
+</script>
+</body>
+</html>

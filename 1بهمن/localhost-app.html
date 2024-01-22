@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<input type="text" name="" id="myinp">
+<button id="mybtn">check</button>
+<button id="clear">clear</button>
+<p id="result"></p>
+<script>
+let myinp=document.getElementById("myinp")
+let mybtn=document.getElementById("mybtn")
+let result=document.getElementById("result")
+let clear=document.getElementById("clear")
+let books=[]
+getlocalstorage()
+
+mybtn.addEventListener('click',function(){
+  let myobj={
+    id:books.length+1,title:myinp.value
+  }
+
+books.push(myobj)
+console.log(books[0].title);
+setintolocalstorage()
+
+
+})
+
+function getlocalstorage(){
+
+let localme=localStorage.getItem('books')
+let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=books.title
+}
+function setintolocalstorage(allbooksarray){
+  let newp=document.createElement('p')
+ document.body.appendChild(newp)
+  newp.innerHTML=myinp.value
+  localStorage.setItem('books',JSON.stringify(books))
+  myinp.value=''
+}
+
+
+
+clear.addEventListener('click',function(){
+  localStorage.clear()
+})
+console.log(localStorage.length);
+</script>
+</body>
+</html>
