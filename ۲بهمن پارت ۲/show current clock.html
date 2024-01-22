@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: lightgoldenrodyellow;
+    }
+    #result{
+      text-align: center;
+      position: absolute;
+      color: saddlebrown;
+      background-color: rgb(253, 195, 195);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p id="result"></p>
+  <script>
+
+
+
+  let result=document.getElementById("result")
+  
+  // console.log(hour);
+  // console.log(min);
+  // console.log(sec);
+
+  setInterval( function clock(){
+    let time=new Date()
+    let hour=time.getHours()
+  let min=time.getMinutes()
+  let sec=time.getSeconds()
+  if(sec<10){
+    sec='0'+time.getSeconds()
+  }
+  if(min<10){
+    min='0'+time.getMinutes()
+  }
+  if(hour<10){
+    hour='0'+time.getHours()
+  }
+    result.innerHTML=hour +":"+min+":"+sec
+    console.log("object");
+
+  },1000)
+ 
+
+
+//   let day=time.getDay()
+//   let year=time.getFullYear()
+//   let month=time.getMonth()
+  
+//   //how to show december
+//   let months=["jan","october","dec"]
+//   let days=["saturday","sunday"]
+
+
+//   // console.log(months[month]);
+//   console.log(days[day]);
+
+// let mytime=
+
+
+  //show current day(shanbe yekshanbe)
+
+  </script>
+</body>
+</html>

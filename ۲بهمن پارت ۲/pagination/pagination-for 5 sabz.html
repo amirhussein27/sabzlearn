@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      background-color: white;
+    }
+    h1{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>USERS</h1>
+  <p id="result"></p>
+  <button id="btn1">1</button>
+  <button id="btn2">2</button>
+  <button id="btn3">3</button>
+  <button id="btn4">4</button>
+  <button id="btn5">5</button>
+
+  <script>
+    
+    let result=document.getElementById("result")
+    let btn1=document.getElementById("btn1")
+    let btn2=document.getElementById("btn2")
+    let btn3=document.getElementById("btn3")
+    let btn4=document.getElementById("btn4")
+    let btn5=document.getElementById("btn5")
+
+    const listItems = [
+    { id: 1, name: 'Amin', family: 'Saeedi Rad' },
+    { id: 2, name: 'Amir', family: 'Zehtab' },
+    { id: 3, name: 'Qadir', family: 'Yolme' },
+    { id: 4, name: 'Babak', family: 'Mohammadi' },
+    { id: 5, name: 'Hasan', family: 'Ghahreman Zadeh' },
+
+    { id: 6, name: 'abbas', family: 'Saeedi Rad' },
+    { id: 7, name: 'asghar', family: 'Zehtab' },
+    { id: 8, name: 't2', family: 'Yolme' },
+    { id: 9, name: 'r1', family: 'Mohammadi' },
+    { id: 10, name: 'd21', family: 'Ghahreman Zadeh' },
+
+    { id: 11, name: 'Saeed', family: 'Ehsani' },
+    { id: 12, name: 'Siamak', family: 'Modiri' },
+    { id: 13, name: 'Mohsen', family: 'Ansari' },
+    { id: 14, name: 'Mehran', family: 'Ali Pour' },
+    { id: 15, name: 'Amir Hossein', family: 'Mahtabi' },
+
+    { id: 16, name: 'Hossein', family: 'Amino' },
+    { id: 17, name: 'Melika', family: 'Ehsani' },
+    { id: 18, name: 'Qadir', family: 'Yolme' },
+    { id: 19, name: 'Fatemeh', family: 'Alilou' },
+    { id: 20, name: 'Ehsan', family: 'Tayyebi' },
+
+    { id: 21, name: 'Zahra', family: 'Gholami' },
+    { id: 22, name: 'Matin', family: 'Sahebi' },
+];
+console.log(listItems.length);
+for(let i=0;i<listItems.length-17;i++){
+  console.log(listItems[i].name);
+  result.innerHTML+=listItems[i].name+" "+listItems[i].family +'<hr>'
+  btn1.style.backgroundColor="yellow"
+  // btn2.style.backgroundColor="white"
+  // btn3.style.backgroundColor="white"
+  // btn4.style.backgroundColor="white"
+  // btn5.style.backgroundColor="white"
+
+}
+
+btn1.addEventListener('click',function first(){
+  result.innerHTML=''
+btn1.style.backgroundColor="yellow"
+for(let i=0;i<listItems.length-17;i++){
+  console.log(listItems[i].name);
+  result.innerHTML+=listItems[i].name+" "+listItems[i].family +'<hr>'
+  btn1.style.backgroundColor="yellow"
+  btn2.style.backgroundColor="white"
+  btn3.style.backgroundColor="white"
+  btn4.style.backgroundColor="white"
+  btn5.style.backgroundColor="white"
+}
+})
+btn2.addEventListener('click',function(){
+  result.innerHTML=''
+
+  for(let i=5;i<10;i++){
+  console.log(listItems[i].name);
+  result.innerHTML+=listItems[i].name+" "+listItems[i].family +'<hr>'
+  btn2.style.backgroundColor="yellow"
+  btn1.style.backgroundColor="white"
+  btn3.style.backgroundColor="white"
+  btn4.style.backgroundColor="white"
+  btn5.style.backgroundColor="white"
+}
+})
+
+btn3.addEventListener('click',function(){
+  result.innerHTML=''
+
+  for(let i=10;i<15;i++){
+  console.log(listItems[i].name);
+  result.innerHTML+=listItems[i].name+" "+listItems[i].family +'<hr>'
+  btn3.style.backgroundColor="yellow"
+  btn1.style.backgroundColor="white"
+  btn2.style.backgroundColor="white"
+  btn4.style.backgroundColor="white"
+  btn5.style.backgroundColor="white"
+}
+})
+
+btn4.addEventListener('click',function(){
+  result.innerHTML=''
+
+  for(let i=15;i<20;i++){
+  console.log(listItems[i].name);
+  result.innerHTML+=listItems[i].name+" "+listItems[i].family +'<hr>'
+  btn4.style.backgroundColor="yellow"
+  btn1.style.backgroundColor="white"
+  btn2.style.backgroundColor="white"
+  btn3.style.backgroundColor="white"
+  btn5.style.backgroundColor="white"
+}
+})
+
+btn5.addEventListener('click',function(){
+  result.innerHTML=''
+
+  for(let i=20;i<22;i++){
+  result.innerHTML+=listItems[i].name+" "+listItems[i].family +'<hr>'
+  btn5.style.backgroundColor="yellow"
+  btn1.style.backgroundColor="white"
+  btn3.style.backgroundColor="white"
+  btn4.style.backgroundColor="white"
+  btn2.style.backgroundColor="white"
+}
+})
+
+
+  </script>
+</body>
+</html>

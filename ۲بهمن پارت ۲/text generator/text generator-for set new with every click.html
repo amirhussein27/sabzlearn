@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+     text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>text generator</h1>
+  <p>number of paragraph</p>
+<input type="number" id="myinp">
+<button id="mybtn">generate</button>
+<div id="result"></div>
+
+<script>
+  let mybtn=document.getElementById("mybtn")
+  let newp='<p>The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.</p>'
+  let result=document.getElementById("result")
+  let myinp=document.getElementById("myinp").value
+  console.log(newp);
+  
+  mybtn.addEventListener('click',function(myinp){
+   result.innerHTML+=newp
+  })
+</script>
+</body>
+</html>
