@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" placeholder="انتخاب نمایش چندتایی" min="1" max="22" id="myinp">
+ <div id="userlist"></div>
+ <div id="pagecount"></div>
+  <script>
+    let userlist=document.getElementById("userlist")
+    let pagecount=document.getElementById("pagecount")
+    let myinp=document.getElementById("myinp")
+let rowcount=myinp.value
+console.log(rowcount);
+let currentpage=1
+
+function setuesrlist(listItems,userlist,rowcount,currentpage){
+userlist.innerHTML=''
+  let endindex=rowcount*currentpage
+  let startindex=endindex-rowcount
+
+
+  let paginateduser=listItems.slice(startindex,endindex)
+  // console.log(paginateduser);
+  paginateduser.forEach(function(user){
+  let newdiv=document.createElement('div')
+  newdiv.innerHTML=user.name +" " +user.family + '<hr>'
+  userlist.appendChild(newdiv)
+// console.log(listItems.length);
+  })
+}
+function setbuttons(listItems,rowcount,pagecount){
+  userlist.innerHTML=''
+let pagenum=(listItems.length/rowcount)
+let pagenum2=Math.ceil(pagenum)
+console.log(listItems.length);
+
+for(i=0;i<pagenum2;i++){
+let btn=document.createElement('button')
+btn.innerHTML=currentpage+i
+  pagecount.appendChild(btn)
+  btn.addEventListener('click',function(){
+  console.log("sadfwqd");
+  setuesrlist(listItems,userlist,rowcount,currentpage)
+})
+}
+
+}
+
+
+const listItems = [
+    { id: 1, name: 'Amin', family: 'Saeedi Rad' },
+    { id: 2, name: 'Amir', family: 'Zehtab' },
+    { id: 3, name: 'Qadir', family: 'Yolme' },
+    { id: 4, name: 'Babak', family: 'Mohammadi' },
+    { id: 5, name: 'Hasan', family: 'Ghahreman Zadeh' },
+
+    { id: 6, name: 'Amin', family: 'Saeedi Rad' },
+    { id: 7, name: 'Amir', family: 'Zehtab' },
+    { id: 8, name: 'Qadir', family: 'Yolme' },
+    { id: 9, name: 'Babak', family: 'Mohammadi' },
+    { id: 10, name: 'Hasan', family: 'Ghahreman Zadeh' },
+
+    { id: 11, name: 'Saeed', family: 'Ehsani' },
+    { id: 12, name: 'Siamak', family: 'Modiri' },
+    { id: 13, name: 'Mohsen', family: 'Ansari' },
+    { id: 14, name: 'Mehran', family: 'Ali Pour' },
+    { id: 15, name: 'Amir Hossein', family: 'Mahtabi' },
+
+    { id: 16, name: 'Hossein', family: 'Amino' },
+    { id: 17, name: 'Melika', family: 'Ehsani' },
+    { id: 18, name: 'Qadir', family: 'Yolme' },
+    { id: 19, name: 'Fatemeh', family: 'Alilou' },
+    { id: 20, name: 'Ehsan', family: 'Tayyebi' },
+
+    { id: 21, name: 'Zahra', family: 'Gholami' },
+    { id: 22, name: 'Matin', family: 'Sahebi' },
+    
+];
+setuesrlist(listItems,userlist,rowcount,currentpage)
+setbuttons(listItems,rowcount,pagecount)
+  </script>
+</body>
+</html>

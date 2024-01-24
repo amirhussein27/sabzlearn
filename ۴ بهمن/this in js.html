@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>hi</h1>
+  <p id="result"></p>
+  <script>
+ const names={
+  firstname:"ali",
+  lastname:"abbasi",
+  id:2213,
+  fullname:function(){
+    return this.firstname+" "+this.lastname
+  }
+ }
+document.getElementById("result").innerHTML=names.fullname()
+  </script>
+</body>
+</html>

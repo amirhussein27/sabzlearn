@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container,#container2{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    padding: 5px;
+    }
+    li{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2 id="question"></h2>
+<ul>
+  <li>
+    <input type="radio" id="a" class="answer">
+    <label for="a" id="a_text"></label>
+  </li>
+  <li>
+    <input type="radio" id="b" class="answer">
+    <label for="b" id="b_text"></label>
+  </li>
+  <li>
+    <input type="radio" id="c" class="answer">
+    <label for="c" id="c_text"></label>
+  </li>
+  <li>
+    <input type="radio" id="d" class="answer">
+    <label for="d" id="d_text"></label>
+  </li>
+</ul>
+<button>submit</button>
+</div>
+<script>
+  let container=document.getElementById("container")
+  let questionel=document.getElementById("question")
+  let a=document.getElementById("a_text")
+  let b=document.getElementById("b_text")
+  let c=document.getElementById("c_text")
+  let d=document.getElementById("d_text")
+  let submit=document.getElementById("submit")
+
+  let currentQuiz=0
+  let score=0
+
+let quizdata=[
+  {
+    question:"Which language runs in a web browser?",
+    a:"java",
+    b:"c",
+    c:"python",
+    d:"javascript",
+    correct:"javascript"
+  },
+  {
+          question: "What does CSS stand for?",
+          a: "Central Style Sheets",
+          b: "Cascading Style Sheets",
+          c: "Cascading Simple Sheets",
+          d: "Cars SUVs Sailboats",
+          correct: "b",
+      },
+      {
+          question: "What does HTML stand for?",
+          a: "Hypertext Markup Language",
+          b: "Hypertext Markdown Language",
+          c: "Hyperloop Machine Language",
+          d: "Helicopters Terminals Motorboats Lamborginis",
+          correct: "a",
+      },
+      {
+          question: "What year was JavaScript launched?",
+          a: "1996",
+          b: "1995",
+          c: "1994",
+          d: "none of the above",
+          correct: "b",
+      },
+];
+
+loadquiz()
+function loadquiz(){
+  const currentQuizData=quizdata[currentQuiz]
+  questionel.innerHTML=currentQuizData.question
+}
+
+</script>
+  </body>
+</html>

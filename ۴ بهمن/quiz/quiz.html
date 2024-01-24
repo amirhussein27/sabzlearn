@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container,#container2{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    padding: 5px;
+    }
+    li{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"><p>who is best goal scorrer in PL?</p>
+    <ul><li>1-kane</li><hr><li id="correct">2-shierer</li><hr><li>3-aguero</li><hr><li>4-salah</li></ul></div>
+
+    <div id="container2"><p>who is best goal scorrer in wordcups?</p>
+      <ul><li>1-kane</li><hr><li id="correct2">2-drogba</li><hr><li>3-klose</li><hr><li>4-mutu</li></ul></div>
+<script>
+  let container=document.getElementById("container")
+  let container2=document.getElementById("container2")
+  container2.style.display="none"
+
+  let myli=document.getElementsByTagName('li')
+let correct=document.getElementById("correct")
+let correct2=document.getElementById("correct2")
+
+
+
+for(i=0;i<myli.length;i++){
+ 
+myli[i].addEventListener('click',function gonext(){
+
+container.style.display="none"
+container2.style.display="block"
+
+})
+}
+myli[1].addEventListener('click',function gonext(){
+
+alert("correct")
+
+})
+
+myli[1].addEventListener('click',function gonext(){
+
+alert("correct")
+
+})
+
+
+
+console.log(myli);
+</script>
+  </body>
+</html>
