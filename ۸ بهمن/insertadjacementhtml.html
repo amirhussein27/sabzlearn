@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>hi</li>
+    </ul>
+    <ul>
+        <li>second</li>
+    </ul>
+    <ul>
+        <li class="box">3</li>
+    </ul>
+    <ul>
+        <li>4</li>
+    </ul>
+    <ul>
+        <li>5</li>
+    </ul>
+    <ul>
+        <li>6</li>
+    </ul>
+    <script>
+let box=document.querySelector('.box')
+console.log(box);
+
+let text='<p>and</p>'
+box.insertAdjacentHTML('beforebegin',text)
+    </script>
+</body>
+</html>
