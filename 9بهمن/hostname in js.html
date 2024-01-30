@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="result">324</p>
+  <button id="mybtn" onclick="set()">click</button>
+  <script>
+    let result=document.getElementById("result")
+    let hostnamee=location.hostname
+    console.log(hostnamee);
+    result.innerHTML=hostnamee
+    function set(){
+      location.hostname="amir.ir"
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    #mydiv{
+      color: blue;
+      background-color: blue;
+      height: 3px;
+position: fixed;
+padding: 3px;
+margin-top: -9px;
+}
+    #result{
+    }
+
+    #red{
+width: 100%;
+background-color: lightcoral;
+height: 500px;
+display: flex;
+
+    }
+    #yellow{
+      width: 100%;
+background-color: yellow;
+height: 500px;
+display: flex;
+
+    }
+    #gray{
+      width: 100%;
+background-color: gray;
+height: 500px;
+display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div id="mydiv"></div>
+<div id="red"></div>
+<div id="yellow"></div>
+<div id="gray"></div>
+
+  <script>
+console.log(document.body.clientHeight);
+
+    // console.log(scrollX);
+    // console.log(scrollY);
+    let mydiv=document.getElementById("mydiv")
+window.addEventListener('scroll',function(){
+  // console.log(scrollY);
+// mydiv.style.width=scrollY*5
+let scrolltop=window.scrollY
+let windowheight=window.innerHeight
+let docheight=document.body.offsetHeight
+let scrollpercent=scrolltop/(docheight-windowheight)
+// console.log(docheight);
+console.log(scrollpercent*100);
+mydiv.style.width=scrollpercent*100+"%"
+
+})
+  </script>
+</body>
+</html>
