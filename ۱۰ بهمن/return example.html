@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ ensert your name <input type="text" name="" id="mytext">
+ <br>
+ <br>
+
+ ensert your age <input type="number" name="" id="myage">
+<br>
+<br>
+<button id="mybtn">finish</button>
+<p id="result"></p>
+
+<script>
+  let mytext=document.getElementById("mytext")
+  let myage=document.getElementById("myage")
+  let result=document.getElementById("result")
+  let mybtn=document.getElementById("mybtn")
+  mybtn.addEventListener('click',function(){result.innerHTML=hi()})
+function hi(){
+  console.log(mytext.value);
+  console.log(myage.value);
+return "hi my name is " + mytext.value + "i am so happy to be hear my age is " + myage.value
+}
+</script>
+</body>
+</html>

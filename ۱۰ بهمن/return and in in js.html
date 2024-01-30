@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<p id="result"></p>
+  <script>
+    let result=document.getElementById("result")
+let mine={name:"hi",family:"there",mood:"how",letter1:"r",letter2:"u"}
+console.log("letter1" in mine);
+
+result.innerHTML=myreturn()
+function myreturn(){
+  return "letter1" +' '+ mine.name
+}
+  </script>
+</body>
+</html>
