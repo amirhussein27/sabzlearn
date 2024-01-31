@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="buiuldli()">build li</button>
+
+  <div id="mydiv">
+    <li id="myli"></li>
+
+  </div>
+  <script>
+    let mine=["one","two","three"]
+    let mydiv=document.getElementById("mydiv")
+    function buiuldli(){
+      for(i=0;i<mine.length;i++){
+        let li=document.getElementById("myli")
+        let newli=mydiv.insertAdjacentElement("afterbegin",li);
+        newli.innerHTML=mine[0]
+
+console.log(mydiv);
+
+      }
+
+
+      console.log("object");
+    }
+  </script>
+</body>
+</html>

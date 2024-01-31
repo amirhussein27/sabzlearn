@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="mydiv"></div>
+  <div id="result"></div>
+  <script>
+    let mine=[12,54,31,13,78,67]
+    let mydiv=document.getElementById("mydiv")
+let keys=mine.keys()
+console.log(keys);
+    let text=''
+for(x of keys){
+  text+=x+'<br>'
+}
+mydiv.innerHTML=text
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="mydiv"></div>
+  <br>
+  <div id="mydiv2"></div>
+
+  <div id="result"></div>
+  <script>
+    let mine=[40, 100, 1, 5, 25, 10]
+    let mine2=[40, 100, 1, 5, 25, 10]
+
+    let mydiv=document.getElementById("mydiv")
+    let mydiv2=document.getElementById("mydiv2")
+
+
+   
+    let newarray= mine.sort(function(a,b){return a-b})
+    mydiv.innerHTML=newarray.pop()
+
+    let newarray2=mine2.sort(function(a,b){return b-a})
+    console.log(newarray2);
+    mydiv2.innerHTML=newarray2.pop()
+
+  </script>
+</body>
+</html>

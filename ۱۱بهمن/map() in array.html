@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="mydiv"></div>
+  <div id="result"></div>
+  <script>
+    let mine=[12,54,31,13,78,67]
+    let mydiv=document.getElementById("mydiv")
+console.log(mine*2);
+let mine2=mine.map(double)
+function double(value){
+ return value*0.5;
+}
+mydiv.innerHTML=mine2
+  </script>
+</body>
+</html>

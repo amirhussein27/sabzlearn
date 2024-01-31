@@ -1,0 +1,64 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<body>
+  
+  
+<div id="player">
+  <audio id="audio" src=""></audio>
+  <div id="controls">
+    <button id="prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rewind-fill" viewBox="0 0 16 16">
+      <path d="M8.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+      <path d="M.404 7.304a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696z"/>
+    </svg></button>
+    <button id="play-pause"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+      <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
+    </svg></button>
+    <button id="next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fast-forward-fill" viewBox="0 0 16 16">
+      <path d="M7.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C.713 12.69 0 12.345 0 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+      <path d="M15.596 7.304a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+    </svg></button>
+    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+  </div>
+  <div id="progress-bar">
+    <div class="progress"></div>
+  </div>
+  <div id="time">
+    <span id="current-time">0:00</span>
+    <span id="duration">0:00</span>
+  </div>
+  <div id="playlist">
+    <ul id="songs">
+     <ol id="myol"> <li data-src="https://www.playurbanomp3.com/Albums/2020/Camilo%20-%20Por%20Primera%20Vez%202020/10%20-%20Camilo,%20Shakira,%20Pedro%20Cap%c3%b3%20-%20Tutu%20-%20Remix.mp3" class="active-song">liTutu Remix - Camilo Ft. Shakira, Pedro Capó</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/05.%20Don%20Omar%20-%20Aunque%20Te%20Fuiste%20(WwW.PlayUrbano.Com).mp3">Aunque Te Fuiste - Don Omar</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar,%20Rakim%20&%20Ken-Y%20-%20Si%20La%20Ves%20(WwW.PlayUrbano.Com).mp3">Si La Vez - Don Omar Ft. RKM Y Ken-Y</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar,%20Wisin%20&%20Yandel%20-%20My%20Space%20(WwW.PlayUrbano.Com).mp3">My Space - Don Omar Ft. Wisin Y Yandel</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Angelito%20Vuela%20(WwW.PlayUrbano.Com).mp3">Angelito Vuela - Don Omar</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Luna%20(WwW.PlayUrbano.Com).mp3">Luna - Don Omar</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Pobre%20diabla%20(WwW.PlayUrbano.Com).mp3">Pobre Diabla - Don Omar</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Aventura%20-%20Ella%20y%20Yo%20(WwW.PlayUrbano.Com).mp3">Ella y Yo - Don Omar Ft. Aventura</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Daddy%20Yankee,%20Wisin%20y%20Yandel%20-%20Mayor%20Que%20Yo%203%20(WwW.PlayUrbano.Com).mp3">Mayor Que Yo 3 - Don Omar Ft. Daddy Yankee, Wisin Y Yandel</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Maluma/Maluma%20Ft.%20Nicky%20Jam%20Y%20Nejo%20-%20La%20Curiosidad%20(WwW.PlayUrbano.Com).mp3">La Curiosidad - Maluma Ft. nicky Jam Y Ñejo</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Lucenzo%20-%20Danza%20Kuduro%20(WwW.PlayUrbano.Com).mp3">Danza Kuduro - Don Omar Ft. Lucenzo</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Play-N-Skillz%20-%20Aunque%20Te%20Fuiste%20(Remix)%20(WwW.PlayUrbano.Com).mp3">Aunque Te Fuiste Remix - Don Omar Play-N Skillz</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Vico%20C%20-%20La%20Vecinita%20(WwW.PlayUrbano.Com).mp3">La Vecinita - Don Omar Ft. Vico C</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/Wisin%20Y%20Yandel%20Ft.%20Hector%20El%20Father%20-%20El%20Telefono%20(WwW.PlayUrbano.Com).mp3">El Telefono - Wisin Y Yandel Ft. Hector El Father</li>
+	  <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/Zion%20-%20Zun%20Dada%20(WwW.PlayUrbano.Com).mp3">Zun Dada - Zion</li>
+	  <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/Zion%20Ft.%20Eddie%20Dee%20-%20Amor%20De%20Pobre%20(WwW.PlayUrbano.Com).mp3">Amor De Pobre - Zion</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/Trebol%20Clan%20Ft%20Hector%20El%20Father%20-%20Gata%20Fiera%20(WwW.PlayUrbano.Com).mp3">Gata Fiera - Trebol Clan Ft. Hector El Father</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Vico%20C/Ivy%20Queen%20Ft.%20Vico%20C%20-%20Me%20Acuerdo%20(WwW.PlayUrbano.Com).mp3">Me Acuerdo - Vico C Ft. Ivy Queen</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/La%20Secta%20All%20Star%20Ft.%20Eddie%20Dee%20-%20Locura%20Automatica%20(Remix)%20(WwW.PlayUrbano.Com).mp3">La Locura Automatica - La Secta All Star</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/RKM%20Y%20Ken-Y%20-%20Me%20Matas%20(Remix)%20(WwW.PlayUrbano.Com).mp3">Me Matas Remix - RKM Y Ken-Y</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/Tego%20Calderon%20-%20Metele%20Sazon%20(WwW.PlayUrbano.Com).mp3">Metele Sazon - Tego Calderon</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/Hector%20Y%20Tito%20-%20Felina%20(WwW.PlayUrbano.Com).mp3">Felina - Hector Y Tito</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Tito%20El%20Bambino/El%20Amor%20(WwW.PlayUrbano.Com).mp3">El Amor - Tito El Bambino</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Vico%20C/Vico%20C%20-%20Me%20Acuerdo%20(WwW.PlayUrbano.Com).mp3">Me Acuerdo - Vico C</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Tony%20Dize/Tony%20Dize%20Ft.%20Ken-Y%20-%20El%20Doctorado%20(Remix)%20(WwW.PlayUrbano.Com).mp3">El Doctorado Remix - Tony Dize Ft. Ken-Y</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Vico%20C/Vico%20C%20Ft.%20Lizy%20Estrella%20-%20Me%20Acuerdo%20(Live)%20(WwW.PlayUrbano.Com).mp3">Me Acuerdo - Vico C Ft. Lizy Estrella (Live)</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Old%20School%20MP3/RKM%20Y%20Ken-Y%20-%20Down%20(Remix)%20(WwW.PlayUrbano.Com).mp3">Down - RKM Y Ken-Y</li>
+      <li data-src="https://www.playurbanomp3.com/Canciones/Tony%20Dize/Tony%20Dize%20Ft.%20RKM%20Y%20Ken-Y%20-%20Quizas%20(WwW.PlayUrbano.Com).mp3">Quizas - Tony Dize Ft. RKM Y Ken-Y</li>
+    </ol> </ul>
+  </div>
+
+</div>
+<script src="script-default.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
