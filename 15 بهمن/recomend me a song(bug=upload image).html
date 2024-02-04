@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(97, 126, 255);
+    cursor: pointer;
+    }
+    p{
+      font-size: 18px;
+      height: 462px;
+      width: 462px;
+    }
+    .still{
+      background-image: url('https://ts2.tarafdari.com/contents/user563601/content-sound/med_1521425888_image.jpg');
+    }
+    .fink{
+      background-image: url('https://www.albumpod.com/Uploads/Web/Weblog/2013%201/Fink%20Live%2001.jpg');
+    }
+  </style>
+</head>
+<body>
+  <p id="result"></p>
+
+  <button id="btn"><h2>recomend a song</h2></button>
+  <script>
+let result=document.getElementById("result")
+
+
+    array=[
+      {id:1, name:"black lagon" ,artist:"still" ,img:'https://ts2.tarafdari.com/contents/user563601/content-sound/med_1521425888_image.jpg'},
+      {id:2, name:"warm shadow" ,artist:"fink" },
+      {id:3, name:"show must go on" ,artist:"queen" },
+      {id:4, name:"loosing my religion" ,artist:"R.E.M" },
+      {id:5, name:"fade to black" ,artist:"metallica" },
+      {id:6, name:"its my life" ,artist:"bon jovi" }
+
+
+
+  ]
+let btn=document.getElementById("btn")
+btn.addEventListener('click',function(){
+  result.classList.remove('fink')
+ result.classList.remove('still')
+
+  // result.classList.remove('still')
+
+let newnum=Math.floor(Math.random()*6);
+console.log(newnum);
+result.innerHTML='songname = '+array[newnum].name+'<br>'+ 'artist = '+array[newnum].artist
+console.log(array[newnum].name);
+// console.log(newnum);
+if(array[newnum].artist=='metallica'){
+  console.log("blackkkkkkk");
+  document.body.style.backgroundColor='gray'
+}
+else{
+  if(array[newnum].artist=='still'){
+  console.log("still");
+ result.classList.add("still")
+
+}
+if(array[newnum].artist=='fink'){
+  console.log("fink");
+ result.classList.add('fink')
+
+}
+else{
+  document.body.style.backgroundColor='white'
+ result.classList.remove('still')
+ result.classList.remove('fink')
+
+}
+
+
+}
+})
+  </script>
+</body>
+</html>

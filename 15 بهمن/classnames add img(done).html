@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .Album1{
+background-image: url('https://amireshraghi.ir/wp-content/uploads/2024/01/Album-1.png');
+    }
+    .Album2{
+      background-image: url('https://amireshraghi.ir/wp-content/uploads/2024/01/Album-2.png');
+
+    }
+    .Album3{
+      background-image: url('https://amireshraghi.ir/wp-content/uploads/2024/01/Album-3.png');
+
+    }
+    .Album4{
+      background-image: url('https://amireshraghi.ir/wp-content/uploads/2024/01/Album-4.png');
+
+    }
+    p{
+      height: 400px;
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <p id="result"></p>
+  <button id="btn">my btn</button>
+  <script>
+    let result=document.getElementById("result")
+  result.classList.remove('Album1')
+  result.classList.remove('Album2')
+  result.classList.remove('Album3')
+  result.classList.remove('Album4')
+
+    let btn=document.getElementById("btn")
+let allarrays=[
+    {id:1 , title:'Album 1' , price:5 , img:'https://amireshraghi.ir/wp-content/uploads/2024/01/Album-1.png',count:1},
+    {id:2 , title:'Album 2' , price:10 , img:'https://amireshraghi.ir/wp-content/uploads/2024/01/Album-2.png',count:1},
+    {id:3 , title:'Album 3' , price:15 , img:'https://amireshraghi.ir/wp-content/uploads/2024/01/Album-3.png',count:1},
+    {id:4 , title:'Album 4' , price:20 , img:'https://amireshraghi.ir/wp-content/uploads/2024/01/Album-4.png',count:1},
+    {id:5 , title:'coffee' , price:25 , img:'https://amireshraghi.ir/wp-content/uploads/2024/01/Cofee.png',count:1},
+    {id:6 , title:'shirt' , price:30 , img:'https://amireshraghi.ir/wp-content/uploads/2024/01/Shirt.png',count:1}
+]
+btn.addEventListener('click',function(){
+  let newnum=Math.floor(Math.random()*3);
+  console.log(newnum);
+ if(newnum==1){
+  // console.log("1");
+  result.classList.remove('Album2')
+  result.classList.remove('Album3')
+  result.classList.remove('Album4')
+  result.classList.add('Album1')
+ }
+ if(newnum==2){
+  // console.log("2");
+  result.classList.remove('Album1')
+  result.classList.remove('Album3')
+  result.classList.remove('Album4')
+  result.classList.add('Album2')
+ }
+ if(newnum==3){
+  // console.log("3");
+  result.classList.remove('Album2')
+  result.classList.remove('Album1')
+  result.classList.remove('Album4')
+  result.classList.add('Album3')
+
+ }
+ if(newnum==0){
+  // console.log("0");
+  result.classList.remove('Album2')
+  result.classList.remove('Album3')
+  result.classList.remove('Album1')
+  result.classList.add('Album4')
+
+ }
+})
+  </script>
+</body>
+</html>
