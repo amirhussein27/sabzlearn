@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="myinp">
+  <button onclick="hi()">click</button>
+  <p id="result"></p>
+  <script>
+let btn=document.getElementById("btn")
+let result=document.getElementById("result")
+function hi(){
+  let myinp=document.getElementById("myinp").value
+  console.log(myinp);
+  switch(myinp){
+    case myinp="0":
+    text="zeroooooo";
+    break;
+    default:
+      text="defaul"
+  }
+  result.innerHTML=text
+}
+  </script>
+</body>
+</html>
