@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      padding: 10px;
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    }
+    .offline{
+      background-color: red;
+    }
+    .online{
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+<h1 class="online" id="myh">
+</h1>
+
+  <script>
+       let myh=document.getElementById("myh")
+
+    window.addEventListener('online',function (){
+      
+myh.innerHTML="online"
+ 
+console.log("online");
+    })
+    window.addEventListener('offline',function (){
+myh.innerHTML="offline"
+console.log("offline");
+
+    })
+  </script>
+</body>
+</html>
