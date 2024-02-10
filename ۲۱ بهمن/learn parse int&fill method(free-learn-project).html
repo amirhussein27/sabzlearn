@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+    }
+    input,button{
+      display: block;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text"  placeholder="ensert text" id="myinp">
+ <input type="number" placeholder="start line" id="start">
+  <input type="number"  placeholder="end line" id="end">
+<button id="btn">click</button>
+<p id="result"></p>
+<script>
+  let array=["blue","red","green","yellow"]
+  let myinp=document.getElementById("myinp")
+  let btn=document.getElementById("btn")
+console.log(array);
+  let result=document.getElementById("result")
+  btn.addEventListener('click',function(){
+   let start=document.getElementById("start").value
+   let start2=parseInt(start)
+   let end=document.getElementById("end").value
+   let end2=parseInt(end)
+array.fill(myinp.value,start,end)
+   console.log(array);
+  result.innerHTML=array[0]+'<br>'+array[1]+'<br>'+array[2]+'<br>'+array[3]
+
+  })
+</script>
+</body>
+</html>
