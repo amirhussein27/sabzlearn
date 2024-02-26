@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ .mydiv{
+    visibility: hidden;
+    width: 150px;
+    background-color: yellow;
+  }
+  .myp:hover + .mydiv{
+    visibility: visible;
+
+  }
+  </style>
+ 
+</head>
+<body>
+  <p class="myp">hover over me</p>
+  <div class="mydiv">hi this is div</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.toolspan{
+  visibility: hidden;
+  width: 140px;
+  z-index: 1;
+}
+.btn:hover +.toolspan {
+  visibility: visible;
+  color: blue;
+  opacity: 1;
+}
+  </style>
+</head>
+<body>
+  
+  <input type="text" id="myinp">
+  <div class="toolbox">
+  <button id="btn" class="btn">copy text <span id="toolspan" class="toolspan">Copy to clipboard</span></button>
+</div>
+</body>
+</html>
