@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1">
+	<title>Autocomplete using jQuery</title>
+	<link rel="stylesheet" href=
+"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet"
+		href="/resources/demos/style.css">
+	<script src=
+		"https://code.jquery.com/jquery-1.12.4.js">
+	</script>
+	<script src=
+		"https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+	</script>
+
+	<script>
+		$(function () {
+
+			/* Making a list of available tags */
+			let tags = [
+				"Delhi",
+				"Ahmedabad",
+				"Punjab",
+				"Uttar Pradesh",
+				"Himachal Pradesh",
+				"Karnataka",
+				"Kerala",
+				"Maharashtra",
+				"Gujrat",
+				"Rajasthan",
+				"Bihar",
+				"Tamil Nadu",
+				"Haryana"
+			];
+
+			/* #the tags is the id of the input 
+			element source: tags is the list of 
+			available tags*/
+			$("#tags").autocomplete({
+				source: tags
+			});
+		});
+        function goToGeeksforGeeks(){
+           window.location.href ="https://www.google.com/search?q="+tags.value+"&sca_esv=c651947b4c13b510&sca_upv=1&rlz=1C1GCEA_enIR1097IR1097&ei=tH_dZeTbBsKKkdUP6qWJmAw&ved=0ahUKEwjkheju8MqEAxVCRaQEHepSAsMQ4dUDCBA&uact=5&oq=455&gs_lp=Egxnd3Mtd2l6LXNlcnAiAzQ1NTIFEAAYgAQyBRAAGIAEMgUQABiABDIFEC4YgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIjQZQAFjsAnAAeAGQAQCYAfQBoAG-BaoBAzItM7gBA8gBAPgBAZgCA6AC6QXCAgsQABiABBiKBRiRApgDAJIHAzItMw&sclient=gws-wiz-serp"
+        }
+	</script>
+</head>
+
+<body>
+	<div class="ui-widget">
+		<input id="tags">
+	</div>
+    <button id="btn" onclick="goToGeeksforGeeks()">search</button>
+</body>
+</html>

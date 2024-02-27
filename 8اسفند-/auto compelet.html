@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(60, 73, 255);
+        }
+        .container{
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+        }
+     .active{
+            background-color: rgb(186, 255, 255);
+            display: block;
+
+        }
+        .search{
+        }
+        li{
+            color: aliceblue;
+            display: none;
+        }
+        #answer{
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <input type="text" placeholder="search" id="myinp" class="search">
+<div id="result"></div>
+    </div>
+    <script>
+        let answer=document.getElementById("answer")
+        let result=document.getElementById("result")
+        let array=[
+        "arsenal","burnely","bourmooth","chelsea","crystal palace","liverpool","man city"
+        ]
+        let myinp=document.getElementById("myinp")
+        let myinpvalue=myinp.value
+        myinp.addEventListener('keyup',function(){
+            if(myinp.value){
+                myinp.classList.add('active')
+        let filterwords=array.filter(function(word){
+          return word.toLowerCase().includes(myinp.value.toLowerCase())
+        })
+        // console.log(filterwords)
+            // console.log("hiiiiii")
+            arrayGenerator(filterwords)
+
+            }
+            else{
+                myinp.classList.remove('active')
+
+            }
+            // console.log(myinp.value)
+        })
+        function arrayGenerator(wordarray){
+          let newitems=  wordarray.map(function(word){
+                return '<li>'+word+'</li>'
+   
+            })
+            
+    // console.log(newitems);
+
+    let customlist
+    if(!newitems.length){
+        customlist='<li>'+myinp.value+'</li>'
+        // console.log(customlist);
+console.log(customlist);
+    }
+    else{
+        customlist=newitems.join('')
+        console.log(customlist);
+    }
+        }
+       
+        
+    </script>
+</body>
+</html>
