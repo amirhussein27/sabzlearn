@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="myul">
+    <li>js</li>
+    <li>css</li>
+    <li>html</li>
+    <li>java</li>
+    <li>scss</li>
+  </ul>
+  <input type="text" id="myinp">
+  <script>
+    let listitems=document.querySelectorAll('li')
+    let myinp=document.getElementById("myinp")
+    let myul=document.getElementById("myul")
+    // console.log(listitems);
+
+    listitems.forEach(function(listitem){
+      listitem.addEventListener('click',function(){
+        console.log(event.target);
+        event.target.remove()
+      })
+    
+    })
+    myinp.addEventListener('keypress',hi)
+    function hi(){
+      if(event.keyCode===13){
+        let newli=document.createElement('li')
+        newli.innerHTML=myinp.value
+myul.append(newli)
+console.log(listitems);
+      }
+    }
+  </script>
+</body>
+</html>

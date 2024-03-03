@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ 
+  </style>
+</head>
+<body>
+<button id="btn">click me</button>
+<p id="result"></p>
+  <script>
+  let result=document.getElementById("result")
+  let btn=document.getElementById("btn")
+  btn.addEventListener('click',clicked,{capture:true})
+  function clicked(){
+    console.log("sddd");
+result.innerHTML=event.currentTarget.tagName
+  }
+  </script>
+</body>
+</html>
