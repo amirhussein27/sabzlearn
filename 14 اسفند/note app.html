@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-40%);
+    }
+    .color-box{
+      border: solid 1px #929292;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  margin-left: 5px;
+    }
+    .color-select{
+      display: flex;
+  padding: 5px 10px 0 0;
+    }
+    #myinp{
+      border: solid blue 1px;
+    }
+    button{
+      float: right;
+    }
+    .mydiv{
+  gap: 10px;
+  background-color: wheat;
+  padding: 10px;
+  display: inline;
+  width: 70px;
+  word-wrap: break-word;
+  border-radius: 15%;
+    }
+    .container{
+  grid-template-columns: auto auto auto;
+  display: grid;
+gap: 9px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Note App</h1>
+  <h2>delete on created icon to remove</h2>
+  <input type="text" id="myinp">
+  <div class="color-select">
+  <div id="d1" class="color-box" style=" background-color: #929292; " onclick="changecolor(event)"></div>
+  <div class="color-box" style="background-color: #FFD37F;" onclick="changecolor(event)"></div>
+  <div class="color-box" style="background-color: #78F87F;" onclick="changecolor(event)"></div>
+</div>
+<button id="delete">delete</button>
+
+<button id="add">+</button>
+<br>
+<br>
+<br>
+<div class="container" id="container">
+
+
+
+
+
+
+
+</div>
+  <script>
+    let myinp=document.getElementById("myinp")
+    let colorbox=document.getElementsByClassName("color-box")
+    let add=document.getElementById("add")
+    let container=document.getElementById("container")
+    let mydiv=document.querySelectorAll('.mydiv')
+    function changecolor(evenet){
+myinp.style.backgroundColor=evenet.target.style.backgroundColor
+// console.log(evenet.target.style.backgroundColor);
+    }
+add.addEventListener('click',function(evenet){
+  // console.log("hii");
+let newdiv=document.createElement('div')
+newdiv.innerHTML=myinp.value
+newdiv.classList.add("mydiv")
+container.append(newdiv)
+newdiv.style.backgroundColor=myinp.style.backgroundColor
+// console.log(myinp.style.backgroundColor);
+})
+
+// console.log(container);
+container.addEventListener('click',function(event){
+  console.log(event.target.tagName);
+  event.target.remove()
+})
+  </script>
+</body>
+</html>

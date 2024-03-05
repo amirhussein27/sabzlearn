@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="myinp">
+  <button id="btn">add</button>
+  <ul id="myul">
+
+  </ul>
+  <script>
+    let btn=document.getElementById("btn")
+    let myinp=document.getElementById("myinp")
+    let myul=document.getElementById("myul")
+    function tolowercase(val){
+     return val.toLowerCase()
+    }
+    function trim(val){
+return val.trim()
+    }
+    btn.addEventListener('click',function(){
+      let newli='<li>'+tolowercase(trim(myinp.value)) +'</li>'
+      console.log(newli);
+
+      myul.insertAdjacentHTML('beforeend',newli)
+    })
+  </script>
+</body>
+</html>

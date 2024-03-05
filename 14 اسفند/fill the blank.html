@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #myinp{
+      width: 50px;
+      border-bottom: solid black;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+    }
+    #myinp:hover{
+      width: 50px;
+      border-bottom: solid rgb(211, 0, 0);
+      border-top: none;
+      border-right: none;
+      border-left: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>fill the blank</h1>
+  <p id="myp">i have lost the will to   <input type="text" name="" id="myinp"></p>
+<button id="btn">ok</button>
+<h2 id="result"></h2>
+  <script>
+    let myinp=document.getElementById("myinp")
+    let btn=document.getElementById("btn")
+    let result=document.getElementById("result")
+    btn.addEventListener('click',function(){
+      if(myinp.value=="live"){
+      console.log("yesssssssssss");
+      result.innerHTML="corrrect"
+    }
+    else{
+      result.innerHTML="incorrrect"
+
+    }
+    })
+   
+  </script>
+</body>
+</html>

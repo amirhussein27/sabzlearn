@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  let books=[
+    {id:1,name:'bi shouri', price:65000},
+    {id:2,name:'salam', price:75000},
+    {id:3,name:'chegone', price:35000}
+  ]
+  function addnewbook(name,price,callback){
+    let newbook={id:books.length+1,name:name,price:price}
+    setTimeout(function(){
+books.push(newbook)
+  },3000)
+  }
+addnewbook("name","price")
+console.log(books);
+  </script>
+</body>
+</html>

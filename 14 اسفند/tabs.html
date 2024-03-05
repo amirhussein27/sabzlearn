@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tabs</title>
+  <style>
+    body{
+      background-color: blanchedalmond;
+    }
+    .container{
+      width: 50%;
+      height: 30%;
+      background-color: aquamarine;
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    }
+    #mydiv{
+      text-align: center;
+      display: inline;
+      display: grid;
+      grid-template-columns: auto auto auto ;
+    }
+    #span1{
+height: 100%;
+border-radius: 5%;
+background-color: brown;
+
+
+    }
+    #span2{
+      height: 100%;
+
+    }
+    #span3{
+height: 100%;
+      
+    }
+    #span1:hover{
+background-color: brown;
+border-radius: 5%;
+
+height: 100%;
+cursor: pointer;
+
+    }
+    #span2:hover{
+height: 100%;
+
+      background-color: brown;
+cursor: pointer;
+    }
+    #span3:hover{
+height: 100%;
+
+      background-color: brown;
+cursor: pointer;
+
+    }
+    #p1{
+display: block;
+    }
+    #p2{
+      display: none;
+
+    }
+    #p3{
+      display: none;
+
+    }
+  </style>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="mydiv"><span id="span1">span1</span>
+      <span id="span2">span2</span>
+      <span id="span3">span3</span></div>
+
+<p id="p1">this is p1</p>
+<p id="p2">this is p2</p>
+<p id="p3">this is p3</p>
+
+  </div>
+  <script>
+    let container=document.getElementById("container")
+    let span1=document.getElementById("span1")
+    let span2=document.getElementById("span2")
+    let span3=document.getElementById("span3")
+let p1=document.getElementById("p1")
+let p2=document.getElementById("p2")
+let p3=document.getElementById("p3")
+
+    
+
+    span1.addEventListener('click',function(){
+span1.style.backgroundColor="brown"
+span2.style.backgroundColor="aquamarine"
+span3.style.backgroundColor="aquamarine"
+
+p1.style.display="block"
+p2.style.display="none"
+p3.style.display="none"
+
+
+console.log("sd");
+    })
+
+    span2.addEventListener('click',function(){
+span2.style.backgroundColor="brown"
+span1.style.backgroundColor="aquamarine"
+span3.style.backgroundColor="aquamarine"
+
+p2.style.display="block"
+p1.style.display="none"
+p3.style.display="none"
+
+console.log("sd");
+    })
+
+    span3.addEventListener('click',function(){
+span3.style.backgroundColor="brown"
+span2.style.backgroundColor="aquamarine"
+span1.style.backgroundColor="aquamarine"
+
+p3.style.display="block"
+p2.style.display="none"
+p1.style.display="none"
+
+console.log("sd");
+    })
+  </script>
+</body>
+</html>
