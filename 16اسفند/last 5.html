@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ </head>
+ <body>
+  <!-- نوشتن برنامه ای که 5 نوت اخری که نوشته شده را نمایش بده -->
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="mybody" onload="ti()">
+      <div class='wrapper'>
+          <input id="myinp" class='inputLine' placeholder='Type your note here...'>
+          <div id="mybtn" class='save button'>Save Note</div>
+          <div id="del" class='del button'>del local storages</div>
+  
+        </div>
+        <div class='notes'>
+        </div>
+        <h3>last 5 previous notes: </h3>
+        <p id="myp"></p>
+        <script src="script.js"></script>
+  </body>
+  </html>
+   <style>
+    body {
+    background: #83a4d4;
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);
+    background: linear-gradient(to right, #b6fbff, #83a4d4);
+    font-family: helvetica, arial;
+    font-weight: 100;
+    font-size: 1em;
+  }
+  .wrapper {
+    width: 400px;
+    height: 60px;
+    max-width: calc(100% - 10px);
+    background: white;
+    padding: 5px;
+    margin: auto;
+    margin-top: 10%;
+  }
+  .inputLine {
+    position: relative;
+    width: calc(100% - 6px);
+    height: calc(82% - 6px);
+    border: none;
+    resize: none;
+    outline: none;
+  }
+  .save {
+    background: lightgreen;
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+  }
+  .del{
+    background: rgb(223, 10, 10);
+    padding: 8px;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+  }
+  .save:hover {
+    background: #23ce23;
+  }
+  .notes {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    margin-top: 40px;
+  }
+  .item {
+    position: relative;
+    display: inline-block;
+    padding: 12px;
+    padding-left: 26px;
+    margin: 5px;
+    background: white;
+    border: 1px solid lightgrey;
+  }
+  .close {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    font-size: .8em;
+    cursor: pointer;
+  }
+   </style>
+   <script>
+let myinp=document.getElementById("myinp")
+let mybtn=document.getElementById("mybtn")
+let del=document.getElementById("del")
+// console.log(mybtn);
+// console.log(myinp.value);
+let mybody=document.getElementById("mybody")
+console.log(mybody);
+let myp=document.getElementById("myp")
+let array=[]
+let myobj={
+  id:array.length+1,
+  title:myinp.value
+}
+function hi(){
+  let myobj={
+    id:array.length+1,
+    title:myinp.value
+  }
+
+  // console.log(myobj.id);
+  // console.log(myobj.title);
+  // console.log(array);
+  // console.log(myinp.value);
+  let newp=document.createElement('p')
+  localStorage.setItem(myobj.id,myobj.title)
+ 
+
+  newp.innerHTML=myobj.title
+  // console.log(newp);
+  myp.append(newp)
+  array.push(myobj)
+  myinp.value=""
+}
+
+mybtn.addEventListener('click',hi)
+
+function ti(){
+  console.log("object");
+  let newp=document.createElement('p')
+  // localStorage.setItem(myobj.id,myobj.title)
+ 
+
+  newp.innerHTML=localStorage.getItem(1) +"-"+ localStorage.getItem(2)
+  +"-"+ localStorage.getItem(3)+"-"+ localStorage.getItem(4)
+  +"-"+ localStorage.getItem(5)
+
+  // console.log(newp);
+  myp.append(newp)
+}
+del.addEventListener('click',function(){
+  localStorage.clear()
+})
+   </script>
+ </body>
+</html>

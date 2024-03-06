@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let obj={
+      id:4,
+      name:'ali',
+      city:'tehran'
+    }
+    let{id:userid,name,city}=obj
+
+
+  let users=[
+    {id:1,name:'ali',city:'ahvaz'},
+    {id:2,name:'amir',city:'ghom'},
+    {id:3,name:'reza',city:'shiraz'},
+  ]
+
+getuser=userid=>{
+  let mainuser=users.find(obj=>obj.id===userid)
+  return mainuser
+}
+console.log(getuser(3));
+  </script>
+</body>
+</html>

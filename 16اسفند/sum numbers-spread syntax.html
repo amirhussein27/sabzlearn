@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="myinp1" value="1">
+  <input type="number" id="myinp2" value="2">
+  <input type="number" id="myinp3" value="3">
+<button id="btn">sum</button>
+<p id="result"></p>
+  <script>
+    let myinp1=document.getElementById("myinp1")
+    let myinp2=document.getElementById("myinp2")
+    let myinp3=document.getElementById("myinp3")
+    let result=document.getElementById("result")
+
+    let btn=document.getElementById("btn")
+    btn.addEventListener('click',function(){
+      // console.log("sdsd");
+    const numbers=[+myinp1.value,+myinp2.value,+myinp3.value]
+
+      result.innerHTML=sum(...numbers)
+      console.log(sum(...numbers));
+    })
+
+    function sum(a,b,c){
+return a+b+c;
+    }
+    // console.log(myinp2.value);
+
+  </script>
+</body>
+</html>

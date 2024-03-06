@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>ensert phone number</p>
+  <input type="number" id="myinp">
+  <button id="btn">click</button>
+  <p id="result"></p>
+  <script>
+let myinp=document.getElementById("myinp")
+let number=myinp.value
+let btn=document.getElementById("btn")
+let result=document.getElementById("result")
+let phonenumber='09129481552'
+// console.log(text.padStart(10,'2'));
+btn.addEventListener('click',function(){
+  
+  // console.log(myinp.value.padStart(2,'0'));
+  let cut=phonenumber.slice(-4)
+  result.innerHTML=cut.padStart(12,'*')
+})
+  </script>
+</body>
+</html>

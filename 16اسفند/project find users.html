@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>inser userid to show information(0 to 8)</p>
+  <p>click on button or press enter to show informations</p>
+
+  <input type="number" id="myinp" value=2>
+  <button id="btn">click</button>
+  <p id="result"></p>
+  <script>
+    let myinp=document.getElementById("myinp")
+    let result=document.getElementById("result")
+    let btn=document.getElementById("btn")
+ let users=[
+  {name:'a',id:1,city:'tehran'},
+  {name:'b',id:2,city:'bam'},
+  {name:'c',id:3,city:'karaj'},
+  {name:'d',id:4,city:'ahvaz'},
+  {name:'e',id:5,city:'jahan'},
+  {name:'f',id:6,city:'england'},
+  {name:'g',id:7,city:'univers'},
+  {name:'h',id:8,city:'saveh'},
+  ]
+  let user={
+    id:1,
+    name:'ali',
+    city:'tehran'
+  }
+
+  let {name,id:userid,city}=user
+
+let finduser=userid=>{
+  let mainuser=users.find(user=>userid===user.id)
+  return mainuser
+}
+console.log(finduser(7));
+ btn.addEventListener('click',function(){
+  result.innerHTML="name="+finduser(+myinp.value).name+'<br>'+"city="+finduser(+myinp.value).city+'<br>'+"id="+finduser(+myinp.value).id+'<br>'
+ })
+ document.body.addEventListener('keydown',function(e){
+  if(e.keyCode===13){
+ 
+  
+  result.innerHTML="name="+finduser(+myinp.value).name+'<br>'+"city="+finduser(+myinp.value).city+'<br>'+"id="+finduser(+myinp.value).id+'<br>'
+  }
+ })
+ </script>
+ 
+</body>
+</html>

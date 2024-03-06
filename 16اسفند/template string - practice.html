@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <p id="result"></p>
+</head>
+<body>
+  <script>
+    let result=document.getElementById("result")
+
+result.insertAdjacentHTML("afterbegin",`${'<ul><li>hi</li></ul>'}`)
+// `${html}`
+console.log(result);
+  </script>
+</body>
+</html>
