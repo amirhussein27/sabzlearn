@@ -94,14 +94,17 @@ a {
   </div>
 </form>
 <script>
+  let db=null
   window.addEventListener('load',()=>{
-    let databaseopenreq=indexedDB.open('sabzlearn',7)
+    let databaseopenreq=indexedDB.open('sabzlearn',14)
 
     databaseopenreq.addEventListener('upgradeneeded',(event)=>{
+      db=event.target.result
       console.log('old v',event.oldVersion)
-      console.log('upgrade',event.target.result)
       console.log('nwe v',event.newVersion)
 
+      db.createObjectStore('users')
+      console.log('upgrade',db.objectStoreNames)
 
     })
     databaseopenreq.addEventListener('success',(event)=>{
