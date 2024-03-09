@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let text='hi i am amir'
+    let regexcode=/amsir/
+    // console.log(regexcode.test(text));
+
+
+    // first word=a , second word=nevm, thrid=p  
+    let text2='hi i am ampsd'
+    let regexcode2=/a.p/
+    // console.log(regexcode2.test(text2));
+
+    // first word=a , second word=nevm, lastword=n
+    let text3='hi i am ampsd sdkaljdlkas amans'
+    let regexcode3=/a.+n/
+    console.log(regexcode3.test(text3));
+
+
+    // gmail
+    let emailregex=/.+@.+.com/
+    let useremail=prompt('please enter your email')
+    console.log(emailregex.test(useremail));
+
+  </script>
+</body>
+</html>

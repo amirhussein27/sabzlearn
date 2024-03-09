@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<input placeholder="ensert a gk of liverpool" type="text" id="myinp">
+<button id="btn">check</button>
+<p id="result"></p>
+  <script>
+    let squad=[ 'ALISSON', 'ADRIAN', 'KELLHER' ]
+    let regexcode=/Alisson/
+    let myinp=document.getElementById("myinp")
+    let btn=document.getElementById("btn")
+    let result=document.getElementById("result")
+
+btn.addEventListener('click',function(){
+  if(squad.includes(myinp.value.toUpperCase())){
+      console.log("yessss");
+      if (!result.textContent.includes(myinp.value)) {
+result.innerHTML+=' '+myinp.value.toUpperCase()
+      }
+      if(result.textContent.includes('ALISSON') & result.textContent.includes('ADRIAN') & result.textContent.includes('KELLHER')){
+        console.log("complete");
+        result.innerHTML+='<br>'+'<br>'+ "completed"
+      }
+    }
+    else{
+      console.log("nooooooooo");
+    }
+})
+
+  </script>
+</body>
+</html>

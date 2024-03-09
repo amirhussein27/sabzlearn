@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li onclick="myfunc(this)">1</li>
+    <li onclick="myfunc(this)">2</li>
+    <li onclick="myfunc(this)">3</li>
+    <li onclick="myfunc(this)">4</li>
+    <li onclick="myfunc(this)">5</li>
+  </ul>
+  <script>
+    function myfunc(el){
+      console.log(el);
+    }
+    function sumnumber(){
+let sum=0
+for(let s of arguments){
+  sum+=s
+console.log(sum);   
+}
+return sum
+
+
+}
+    sumnumber(3,3,5)
+  </script>
+</body>
+</html>
