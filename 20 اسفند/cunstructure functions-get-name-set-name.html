@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<p id="result"></p>
+  <script>
+
+
+  function person(personusername,personage,personjob){
+    this.username=personusername
+    this.age=personage
+    this.job=personjob
+  
+  this.getname=function(){
+    return personusername
+  }
+  this.getage=function(){
+    return personage
+  }
+  this.getjob=function(){
+    return personjob
+  }
+  this.setname=function(newname){
+    this.username=newname
+  }
+  this.setage=function(newage){
+    this.age=newage
+  }
+  this.setjob=function(newjob){
+    this.job=newjob
+  }
+}
+let userali=new person('ali',25,'admin')
+userali.setage(70)
+console.log(userali);
+  </script>
+</body>
+</html>

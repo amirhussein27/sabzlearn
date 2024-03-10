@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="result"></p>
+  <script>
+    let result=document.getElementById("result")
+    const person1 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+const person2 = {
+  name: "blue",
+  age: 30,
+  city: " York"
+};
+function myfunc(score,city){
+console.log("his name is "+ this.name +" score:" + score +" city: "+ city);
+}
+// myfunc.apply(person1,[20,'tabriz'])
+// myfunc.apply(person2,[50,'yazd'])
+
+myfunc.bind(person1,14,'teh')()
+myfunc.bind(person2)()
+
+// result.innerHTML=text
+</script>
+</body>
+</html>

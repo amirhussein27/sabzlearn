@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="username" id="username">
+  <input type="text" placeholder="age" id="age">
+  <input type="text" placeholder="job" id="job">
+<button onclick="btn()">ensert</button>
+<p id="result"></p>
+  <script>
+    let result=document.getElementById("result")
+    let username=document.getElementById("username")
+    let age=document.getElementById("age")
+    let job=document.getElementById("job")
+    console.log(age);
+  // function Animal(){
+  //   this.name='dog',
+  //   this.color='brown',
+  //   this.canfly='no'
+  // }
+  // let newanimal=new Animal()
+  // let newanimal2=new Animal()
+
+  // console.log(newanimal);
+  // console.log(newanimal2);
+
+  function person(Personid,personusername,personage,personjob){
+    this.id=Personid
+    this.username=personusername
+    this.age=personage
+    this.job=personjob
+
+  }
+  let users=[]
+
+  // let userali=new person(0,'ali',22,'worker')
+  // console.log(userali);
+  function btn(){
+    let usere=new person(0,username.value,age.value,job.value)
+    console.log(usere);
+result.innerHTML+=" id= "+usere.id + " name= "+usere.username + " age= "+usere.age + " job= "+usere.job+'<br>'
+users.push(usere.age)  
+console.log(users);
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="result"></p>
+  <script>
+    let result=document.getElementById("result")
+    const person1 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+function myfunc(score,city){
+console.log("his name is "+ this.name +" score:" + score +" city: "+ city);
+}
+myfunc.call(person1,20,"teh")
+// result.innerHTML=text
+</script>
+</body>
+</html>
