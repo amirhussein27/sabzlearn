@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ </head>
+ <body>
+   <p></p>
+   <script>
+    let user={
+      name:'Amir',
+      id:1,
+      lastname:'amiri'
+    }
+
+    // let userset=new Set(Object.entries(user))
+    // console.log(userset);
+ 
+    let usermap=new Map(Object.entries(user))
+    console.log(usermap);
+
+    let me=""
+    for(let x in user){
+      me+=user[x]+" "
+    }
+    console.log(me);
+
+
+   </script>
+ </body>
+</html>

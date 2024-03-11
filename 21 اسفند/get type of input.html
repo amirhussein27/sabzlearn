@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ </head>
+ <body>
+  <input id="myinp">
+  <button id="btn">ok</button>
+   <script>
+    let myinp=document.getElementById("myinp")
+    let btn=document.getElementById("btn")
+    btn.addEventListener('click',callbackFunction)
+function callbackFunction(element, index, array) {
+    // console.log(typeof myinp.value);
+    // check that element is a string
+  const isNotString = typeof element !== "string";
+    // if it's not, end function
+    if (isNotString) {return;}
+    
+}
+callbackFunction(myinp.value, 2, 3)
+   </script>
+ </body>
+</html>

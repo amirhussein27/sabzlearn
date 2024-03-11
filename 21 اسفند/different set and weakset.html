@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ </head>
+ <body>
+   <p></p>
+   <script>
+    let user={
+      name:'Amir',
+      id:1,
+      lastname:'amiri'
+    }
+    function Fakedata(){
+      this.data={
+        data:'fake'
+
+      }
+    }
+
+      window.Fakedata=new Fakedata()
+    // let userset=new Set(Object.entries(user))
+    // console.log(userset);
+ console.log(window);
+      let newset=new WeakSet()
+      newset.add(window.Fakedata)
+
+    console.log(newset);
+    delete window.Fakedata
+console.log(window.Fakedata);
+</script>
+ </body>
+</html>
