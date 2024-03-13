@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let user={
+      name:'amir',
+      age:60,
+      familiy:'rezayie'
+    }
+
+    let userproxy=new Proxy(user,{
+      get: function(target,property){
+        console.log("target: ",target);
+        console.log("property: ",property);
+        return target[property] ? target[property]:null
+        // second way 
+        // return property in target ? target[property]:null
+
+      }
+    })
+    console.log('user proxy',userproxy.age);
+    console.log('user proxy',userproxy.eamail);
+
+  </script>
+</body>
+</html>
