@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      handelr3 = {
+        set(obj,prop,value){
+if(prop=='age'){
+  if (Number.isInteger(value)) {
+    console.log("integer")
+  }
+  if(!Number.isInteger(value)){
+    console.log("not integer");
+  }
+  if (value>200) {
+    console.log('age not seems valid');
+    
+  }
+  obj[prop]=value
+  return true
+}
+        }
+      };
+      user = new Proxy({}, handelr3);
+      user.age=210
+      console.log(user.age);
+    </script>
+  </body>
+</html>

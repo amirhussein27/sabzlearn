@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let user={
+      name:'amir',
+      age:60,
+      familiy:'rezayie'
+    }
+
+     user=new Proxy(user,{
+      get: function(target,property){
+        // console.log("target: ",target);
+        // console.log("property: ",property);
+        return target[property] ? target[property]:null
+        // second way 
+        // return property in target ? target[property]:null
+
+      },
+      set: function (target,property,value){
+        // console.log("target",target);
+        // console.log("property",property);
+        // console.log("value",value);
+
+        if(property=='age' && value<18){
+          value=18
+        }
+       if(property==='type'){
+          target[property] = value
+          target[property] = "1"
+
+        }
+        else{
+          throw new Error('this value is not valid 27')
+          target[property] = "0"
+          // alert("alooooo")
+        }
+     target[property]=value
+      }
+    })
+    // console.log('user proxy',userproxy.age);
+    // console.log('user proxy',userproxy.eamail);
+    user.phone='1234'
+    user.age=17
+    user.type='admin'
+
+    // console.log(user.phone);
+    // console.log(user.age);
+console.log(user.type);
+
+  </script>
+</body>
+</html>
