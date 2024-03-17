@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let books=[
+   {
+    id:1,
+    name:'amir',
+    price:5000,
+   } ,
+   {
+    id:2,
+    name:'ali',
+    price:10000,
+   } ,
+   {
+    id:3,
+    name:'asghar',
+    price:20000,
+   } 
+]
+
+       function addbook(name,price,callback){
+let newbook={
+    id:books.length+1,
+    name,
+    price
+}
+setTimeout(function(){
+   books.push(newbook) 
+   callback()
+},2000)
+       }
+addbook('newone',13000,logbooks)
+
+function logbooks(){
+    console.log(books);
+}
+
+    </script>
+</body>
+</html>
