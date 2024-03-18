@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p >ensert score</p>
+    <input type="number" id="myinp">
+    <button id="mybtn">check</button>
+    <p id="result"></p>
+    <script>
+     let myinp=document.getElementById("myinp")
+     let mybtn=document.getElementById("mybtn")
+     let result=document.getElementById("result")
+mybtn.addEventListener('click',function(){
+  let x=myinp.value;
+
+  let answer = x<5 && x>=0 ? 'd':x>=5 && x<10 ? 'c':x>=10 && x<15 ? 'b': x>=15 && x<20 || x==20 ? 'a':'invalid score'
+result.innerHTML=answer
+console.log(myinp.value);
+})
+
+// d=0-5
+// c =5-10
+//  b=10-15
+//  a=15-20
+    </script>
+  </body>
+</html>

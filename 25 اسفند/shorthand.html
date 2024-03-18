@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let  age=29
+      // let  name='ali'
+      // let  family='asgari'
+      // let users={
+      //   age:age,
+      //   name:name,
+      //   family:family
+      // }
+
+      // console.log(users);
+
+      // other way to use/
+
+      // let age = 29;
+      // let name = "ali";
+      // let family = "asgari";
+      // let users = {
+      //   age,
+      //   name,
+      //   family,
+      // };
+
+      // console.log(users);
+
+
+      // third way to do this method
+
+      let usermaker=(age,name,family)=>{
+        let newuser={
+        age,
+        name,
+        family
+      }
+      return newuser
+      }
+     let userali=usermaker(12,'abbas','asghari')
+     console.log(userali);
+    </script>
+  </body>
+</html>
