@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>
+    JavaScript Promise Object
+</h1>
+<h2>
+    The then() Metod
+</h2>
+<p>
+    Wait 3 seconds (3000 milliseconds) for this page to change.
+</p>
+<body>
+    <script>
+let mypromise=new Promise(function(myresolve,myreject){
+    setTimeout(() => {
+        myresolve("I!")
+    }, 3000);
+})
+mypromise.then(function(value){
+    alert(value)
+})
+    </script>
+</body>
+</html>
