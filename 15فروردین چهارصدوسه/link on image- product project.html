@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* makes smaller font in phone  */
+.top-left {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+  body {
+    background-color: lightblue;
+  }
+  .top-left {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  font-size: small;
+}
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#white-person{
+  position: absolute;
+  top: 2%;
+  left: 22%;
+  font-size: small;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Text</h2>
+<p>How to place text over an image:</p>
+
+<div class="container">
+  <img src="https://s8.uupload.ir/files/screenshot_(22).png_3ng6.jpeg" alt="Snow" style="width:100%;">
+  <div class="bottom-left">Bottom Left</div>
+  <div class="top-left"><a href="https://www.google.com/search?q=translate&oq=translate&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiPAjIHCAIQABiPAtIBCDE4NjJqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8">yellow person</a></div>
+  <div id="white-person">white person</div>
+  <div class="top-right">Top Right</div>
+  <div class="bottom-right">Bottom Right</div>
+  <div class="centered">Centered</div>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
