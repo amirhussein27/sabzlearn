@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let mypromise=new Promise((resolve,reject)=>{
+   let text=''
+   if (text) {
+    resolve(text)
+   }
+   else{
+    reject(new Error("text is empty"))
+   }
+    })
+
+console.log(mypromise);
+  </script>
+</body>
+</html>
