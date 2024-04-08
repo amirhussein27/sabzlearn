@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>number1</h2>
+  <h3 id="firstnum">2</h3>
+  <h2>number2</h2>
+  <h3 id="secondnum">2</h3>
+<button id="btn">generate</button>
+<p>go below page to see answer</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<p id="result">see answer multiplication</p>
+  <script>
+let firstnum=document.getElementById("firstnum")
+let secondnum=document.getElementById("secondnum")
+let btn=document.getElementById("btn")
+let btn2=document.getElementById("btn2")
+let result=document.getElementById("result")
+
+btn.addEventListener('click',function(){
+//  firstnum.innerHTML= Math.floor(Math.random()*100)
+//  firstnum.value=Math.floor(Math.random()*100)
+//  firstnum.innerHTML=Math.floor(Math.random()*100)
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+const rndInt = randomIntFromInterval(10, 99)
+console.log(rndInt)
+
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+const rndInt2 = randomIntFromInterval(10, 99)
+console.log(rndInt2)
+let multipy=rndInt*rndInt2
+console.log(multipy);
+firstnum.innerHTML=rndInt
+//  console.log(firstnum.value);
+secondnum.innerHTML=rndInt2
+result.innerHTML=multipy
+})
+
+
+
+  </script>
+</body>
+</html>
+
+

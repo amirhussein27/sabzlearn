@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ </head>
+ <body>
+  
+   <script>
+let fetchdata=()=>{
+  return new Promise((resolve,reject) => {
+    setTimeout(() => {
+      console.log('fetching data complete')
+      resolve({id:1,message:'fetching data complete'})
+    }, 2000);
+  })
+}
+   
+let parsedata=(data)=>{
+  return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      let parseoutput='parsed the data for id: ${data.id} and with message: ${data.message}'
+      resolve({parsed:parseoutput})
+    }, 2000);
+  })
+}
+
+let showdata=(Response)=>{
+  return new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      console.log("show data", Response.parsed);
+      resolve(Response)
+    }, 2000);
+  })
+}
+fetchdata()
+.then(parsedata)
+.then(showdata)
+   </script>
+ </body>
+</html>
+
+
+https://www.w3schools.com/bootstrap5/bootstrap_templates.php
