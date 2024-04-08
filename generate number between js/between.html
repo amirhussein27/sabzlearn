@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+btn.addEventListener('click',function(){
+//  firstnum.innerHTML= Math.floor(Math.random()*100)
+//  firstnum.value=Math.floor(Math.random()*100)
+//  firstnum.innerHTML=Math.floor(Math.random()*100)
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+const rndInt = randomIntFromInterval(10, 99)
+console.log(rndInt)
+
+
+const rndInt2 = randomIntFromInterval(10, 99)
+console.log(rndInt2)
+let multipy=rndInt*rndInt2
+console.log(multipy);
+
+})
+  </script>
+</body>
+</html>
+
+
