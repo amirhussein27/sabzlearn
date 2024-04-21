@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body{
+    text-align: center;
+    background-color: lightslategray;
+	
+}
+div.container {
+    text-align: center;
+    margin-top: 14%;
+	display: inline-block;
+	position: relative;
+  }
+  
+  ul.myUL {
+    display: inline-block;
+    text-align: left;
+    list-style-type:none;
+    width: 300px;
+    color: black;
+    cursor: pointer;
+  }
+  #trash:hover{
+    color: red;
+  }
+  #trash{
+    color: #fff;
+    float: right;
+    position: relative;
+    margin-top: -20px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: lightsalmon;
+    border-radius: 5%;
+  }
+  input{
+    width: 260px;
+  }
+  h2{
+    color: aliceblue;
+  }
+  h3{
+    cursor: pointer;
+    color:darkred;
+  }
+  #myinp1,#myinp2,#myinp3{
+	width: 300px;
+  }
+  th{
+	color: yellow;
+  }
+</style>
+</head>
+<body>
+	<h2>book list</h2>
+
+<div id="container" class="container">
+	<p style="text-align: left; color: yellow;">title</p>
+  <input id="myinp1" type="text" >
+ <br>
+ <br>
+ <p style="text-align: left; color: yellow;">auothor</p>
+  <input id="myinp2" type="text" >
+ <br>
+ <br>
+ <p style="text-align: left; color: yellow;">year</p>
+  <input id="myinp3" type="text" >
+<br>
+  <br>
+<button id="mybtn">add</button>
+  <h2>to do list</h2>
+<table id="mytable" style="width:100%">
+	<tr>
+		<th>title</th>
+		<th>author</th>
+		<th>year</th>
+	</tr>
+<tr id="mytr">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+
+<script>
+  let myinp1=document.getElementById("myinp1")
+let myinp2=document.getElementById("myinp2")
+let myinp3=document.getElementById("myinp3")
+let mytable=document.getElementById("mytable")
+let mytr=document.getElementById("mytr")
+
+let mybtn=document.getElementById("mybtn")
+mybtn.addEventListener('click',function(){
+  localStorage.setItem("name1", myinp1.value);
+  localStorage.setItem("name2", myinp2.value);
+  localStorage.setItem("name3", myinp3.value);
+
+  console.log(localStorage.getItem("name2"));
+  console.log(myinp1.value);
+
+let newtr=document.createElement("tr")
+let newtd1=document.createElement("td")
+newtd1.innerText=myinp1.value
+newtr.appendChild(newtd1)
+let newtd2=document.createElement("td")
+newtd2.innerText=myinp2.value
+newtr.appendChild(newtd2)
+let newtd3=document.createElement("td")
+newtd3.innerText=myinp3.value
+newtr.appendChild(newtd3)
+mytable.appendChild(newtr)
+
+})
+let newtr=document.createElement("tr")
+let newtd1=document.createElement("td")
+newtd1.innerText=localStorage.getItem("name1")
+newtr.appendChild(newtd1)
+let newtd2=document.createElement("td")
+newtd2.innerText=localStorage.getItem("name2")
+newtr.appendChild(newtd2)
+let newtd3=document.createElement("td")
+newtd3.innerText=localStorage.getItem("name3")
+newtr.appendChild(newtd3)
+mytable.appendChild(newtr)
+</script>
+</body>
+</html>
