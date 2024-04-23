@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title id="mytitle">hi there</title>
+ </head>
+ <body>
+ 
+   <script>
+    let mytitle=document.getElementById("mytitle")
+window.addEventListener('focus',function(){
+  mytitle.innerHTML='its fucused'
+})
+  
+window.addEventListener('blur',function(){
+  mytitle.innerHTML='its not fucused'
+})
+   </script>
+ </body>
+</html>

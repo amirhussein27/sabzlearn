@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered2 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#myinp{
+  background-color: rgb(4, 65, 65);
+  color: white;
+  height: 30px;
+opacity: 50%;
+}
+div{
+  color: white;
+}
+::placeholder{
+  color: aliceblue;
+  border-bottom: solid 1px yellow;
+}
+
+#city{
+font-size: 46px;
+}
+  </style>
+</head>
+<body>
+  <div id="container">
+      <img src="https://wallpapergram.ir/wp-img/WallpaperGram.IR_1553775356_23242.jpg" alt="Snow" style="width:100%;">
+      <input id="myinp" class="top-left" placeholder="search for a city" style="text-align: center; color: aliceblue;"></div>
+      <div class="centered2" id="city"></div>
+      
+      <div class="centered" id="weather"></div>
+    
+  </div>
+  <script>
+ var myinp = document.getElementById("myinp");
+let weather=document.getElementById("weather")
+let city=document.getElementById("city")
+
+// Execute a function when the user presses a key on the keyboard
+myinp.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    console.log(myinp.value);
+
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+myinp.value+'&appid=568c5f9759c814e7258dc64b450b67af')
+    .then(res=>res.json())
+    .then(user=>{
+      let posts=Object.entries(user)
+      console.log(posts);
+
+        console.log(posts[11][1]);
+        showdata(user)
+        function showdata(user){
+         weather.innerHTML='Main weather='+posts[1][1][0].main
+         city.innerHTML=posts[11][1]
+        }
+    })
+  }
+});
+  </script>
+</body>
+</html>

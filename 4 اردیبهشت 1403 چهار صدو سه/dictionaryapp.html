@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(233, 161, 255);
+
+    }
+    .container{
+      margin-top: 10%;
+      margin-bottom: 10%;
+   
+
+
+    }
+    #myform{
+      background-color: aliceblue;
+      padding: 5%;
+      border-radius: 2%;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+  <form id="myform">
+
+    <div class="mb-3">
+      <input type="email" style="width: 70%; display: inline;" class="form-control" id="myinp" aria-describedby="emailHelp"> <button type="submit" class="btn btn-primary" id="btn">Submit</button>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label" id="password">Password</label>
+    </div>
+    <div class="mb-3 form-check">
+      <p>dsd</p>
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+   
+  </form>
+</div>
+  <script>
+ let myinp=document.getElementById("myinp")
+ let btn=document.getElementById("btn")
+ let myform=document.getElementById("myform")
+ let password=document.getElementById("password")
+ myform.addEventListener('click',function(){
+  event.preventDefault()
+ })
+
+
+ btn.addEventListener('click',function(){
+  fetch('https://api.dictionaryapi.dev/api/v2/entries/en/'+myinp.value+'')
+  .then(res=>res.json())
+  .then(user=>{
+
+    console.log(user[0].meanings[0].definitions[0]);
+password.innerHTML=user[0].meanings[0].definitions[0]
+  })
+ })
+  </script>
+</body>
+</html>
