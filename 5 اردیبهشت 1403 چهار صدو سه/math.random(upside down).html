@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hi</p>
+    <p id="result"></p>
+    <button id="copy">copy</button>
+
+    <br><br><br><br><br>
+    <input type="number" id="myinp">
+    <button id="btn">Comparison</button>
+    <script>
+let randomnumber=Math.floor(Math.random()*1000000+10000)
+let result=document.getElementById("result")
+let result2=document.getElementById("result2")
+let btn=document.getElementById("btn")
+let myinp=document.getElementById("myinp")
+
+
+if(randomnumber>1000000){
+    result.innerHTML="not found"
+}
+else{
+    result.innerHTML=randomnumber
+}
+btn.addEventListener('click',function(){
+    let st= randomnumber.toString()
+  let arr= st.split('')
+ let newarr= arr.reverse()
+ let final=newarr.join('')
+let final2=parseFloat(final)
+console.log(final2);
+console.log(myinp.value);
+if(myinp.value==final2){
+    alert("gj");
+    location.reload()
+}
+else{
+    alert('error');
+    location.reload()
+}
+})
+
+
+let copy=document.getElementById('copy')
+copy.addEventListener('click',function(){
+    console.log(result);
+
+navigator.clipboard.writeText(result.value)
+})
+
+
+
+
+
+
+    </script>
+</body>
+</html>

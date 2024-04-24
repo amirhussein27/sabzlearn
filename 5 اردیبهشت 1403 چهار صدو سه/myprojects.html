@@ -1,0 +1,118 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box }
+body {
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #060606;
+}
+ul{
+  width: min(100%, 60rem);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+  list-style: none;
+  perspective: 1000px;
+  display: grid;
+  row-gap: 0.5rem;
+}
+ul li.card{
+  position: relative;
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+  background-color: var(--bg-color);
+  background-image: linear-gradient(to right, rgb(0 0 0 / .15), transparent);
+  transform-style: preserve-3d;
+  color: var(--color);
+  
+  display: grid;
+  grid-template: 'icon' 'title' 'content';
+  row-gap: 0.5rem;
+  column-gap: 2rem;
+}
+ul li.card::before, ul li.card::after {
+  --side-rotate: 60deg;
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: calc(50% - (50% * var(--ry))) 50%  ;
+  transform: rotateY(calc(var(--side-rotate) * var(--ry)));
+  background-color: inherit;
+  background-image: linear-gradient(calc(90deg * var(--ry)), rgb(0 0 0 / .25), rgb(0 0 0 / .5));  
+}
+ul li.card::before {--ry: -1; right: 100% }
+ul li.card::after {--ry: 1; left: 100% }
+
+ul li.card .icon {
+  grid-area: icon;
+  display: grid;
+  place-items: center;
+}
+ul li.card .icon i {
+  font-size: 2rem;
+}
+ul li.card .title{
+  grid-area: title;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+ul li.card .content{
+  grid-area: content;
+}
+
+@media (min-width: 30rem){
+  ul li.card {
+    grid-template: 'icon title' 'icon content';
+    text-align: left;
+  }
+  ul li.card .title { text-align: left }
+}
+  </style>
+</head>
+<ul>
+  <li class="card" style="--color:#ececec; --bg-color:#E98B43">
+    <div class="icon"><i class="fa-solid fa-house"></i></div>
+    <div class="title"><a style="text-decoration: none; color: aliceblue;" href="https://amireshraghi.ir/weatherapp-sabz.html">weather app</a></div>
+    <div class="content">ensert city and receive data</div>
+  </li>
+  <li class="card" style="--color:#ececec; --bg-color:#C23D2A">
+    <div class="icon"><i class="fa-solid fa-gear"></i></div>
+    <div class="title"><a style="text-decoration: none; color: aliceblue;" href="https://amireshraghi.ir/todolist.html">to do list</a></div>
+    <div class="content">dayli to do list </div>
+  </li>
+  <li class="card" style="--color:#ececec; --bg-color:#842C2A">
+    <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+    <div class="title"><a style="text-decoration: none; color: aliceblue;" href="https://amireshraghi.ir/timeir.html">timer</a></div>
+    <div class="content">show online clock </div>
+  </li>
+  <li class="card" style="--color:#ececec; --bg-color:#022F46">
+    <div class="icon"><i class="fa-solid fa-chart-column"></i></i></div>
+    <div class="title"><a style="text-decoration: none; color: aliceblue;" href="https://amireshraghi.ir/getspecialpost.html">get special post</a></div>
+    <div class="content">ensert id and get infoes</div>
+  </li>
+  <li class="card" style="--color:#ececec; --bg-color:#032437">
+    <div class="icon"><i class="fa-solid fa-circle-star"></i></div>
+    <div class="title"><a style="text-decoration: none; color: aliceblue;" href="https://amireshraghi.ir/dictionaryapp.html">online dictionary</a></div>
+    <div class="content">ensert word and get meanings </div>
+  </li>
+  <li class="card" style="--color:#ececec; --bg-color:#032437">
+    <div class="icon"><i class="fa-solid fa-circle-star"></i></div>
+    <div class="title"><a style="text-decoration: none; color: aliceblue;" href="https://amireshraghi.ir/brentford-in-one.html">brentford formation</a></div>
+    <div class="content">guess formation of brendford </div>
+  </li>
+  <li class="card" style="--color:#ececec; --bg-color:#032437">
+    <div class="icon"><i class="fa-solid fa-circle-star"></i></div>
+    <div class="title"><a style="text-decoration: none; color: aliceblue;" href="https://amireshraghi.ir/password2-project.html">password</a></div>
+    <div class="content">ensert your correct password </div>
+  </li>
+</ul>
