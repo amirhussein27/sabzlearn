@@ -42,15 +42,34 @@ this.name=newname
   }
 
   startDiv(){
-    console.log(`started${this.username} dive`);
+    console.log(`${this.personjob} ${this.username} dive`);
+  }
+  getage(){
+   return this.personage
   }
   }
+
+  class professor extends person{
+constructor(personname,personage,personjob,personaddress,personlesson,yearsofjob){
+
+
+  super(personname,personage,personjob,personaddress)
+  console.log(super.getage());
+
+    this.personlesson=personlesson
+    this.yearsofjob=yearsofjob
+
+}
+// DRY
+  }
+let profossorramin=new professor('ramin',31,'professor','tabriz','web',15)
+
 
   let personali=new person('ali',19,'it man','mantaghe 6')
   let personamir=new person('amir',29,'it man','mantaghe 7')
   let personmahmood=new person('mahmood',39,'it man','mantaghe 8')
 
-console.log(personali);
+  profossorramin.startDiv()
 
 personali.startDiv()
 </script>
