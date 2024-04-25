@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Creating an Object from a JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+let mine={
+  "products": {
+    "-Nv_gwXcA_nsd0OK0ZCY": {
+      "count": "12",
+      "price": "9000000",
+      "title": "laptop"
+    }
+  },
+  "te": 21,
+  "todo": {
+    "-NvaaVmrQAHDGHAdh24G": {
+      "job": "how to use firebase",
+      "title": "js pro"
+    },
+    "-Nvaaf_Ve-Gu3iKwPiEX": {
+      "job": "2",
+      "title": "secon"
+    },
+    "-NvacH9dzmtVe1W_E6k8": {
+      "job": "wes",
+      "title": "sd"
+    }
+  },
+  "users": {
+    "-Nv_eiWZNR-JYdgItpDk": {
+      "email": "wqe",
+      "psw": "ad",
+      "pswr": "wda"
+    },
+    "-Nv_fQIMouNfHhfp-0nj": {
+      "email": "sad",
+      "psw": "wda",
+      "pswr": "awdsa"
+    },
+    "-Nv_fus2fKL0maJNnxoI": {
+      "email": "a",
+      "psw": "a",
+      "pswr": "a"
+    },
+    "-Nv_fzj3faR-Y8hznobG": {
+      "email": "b",
+      "psw": "b",
+      "pswr": "b"
+    },
+    "-Nvan_WmsSmMDrPx6NNI": {
+      "email": "new",
+      "psw": "this is",
+      "pswr": "stop"
+    }
+  }
+}
+
+const obj = JSON.parse(mine);
+document.getElementById("demo").innerHTML = obj
+console.log(obj);
+
+</script>
+
+</body>
+</html>

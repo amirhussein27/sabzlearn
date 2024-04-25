@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function user(username,userage,userjob){
+    this.name=username
+    this.age=userage
+    this.job=userjob
+  }
+ this.getName=function(){
+  return this.name
+ }
+ this.getage=function(){
+  return this.age
+ } 
+ this.getjob=function(){
+  return this.job
+ }
+  this.setname=function(){
+this.name=newname
+ }
+  this.getage=function(){
+    this.age=newage
+ } 
+ this.getjob=function(){
+  this.job=newjob
+ }
+
+  class person{
+  constructor(personname,personage,personjob,personaddress){
+    console.log(personname,personage,personjob,personaddress);
+
+    // how to set 
+    this.username=personname
+    this.personage=personage
+    this.personjob=personjob
+    this.personaddress=personaddress
+  }
+
+  startDiv(){
+    console.log(`started${this.username} dive`);
+  }
+  }
+
+  let personali=new person('ali',19,'it man','mantaghe 6')
+  let personamir=new person('amir',29,'it man','mantaghe 7')
+  let personmahmood=new person('mahmood',39,'it man','mantaghe 8')
+
+console.log(personali);
+
+personali.startDiv()
+</script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered2 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered3 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered4 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered5 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#myinp{
+  background-color: rgb(4, 65, 65);
+  color: white;
+  height: 30px;
+opacity: 50%;
+}
+div{
+  color: white;
+}
+::placeholder{
+  color: aliceblue;
+  border-bottom: solid 1px yellow;
+}
+
+#city{
+font-size: 46px;
+}
+#temp{
+  font-size: 50px;
+}
+  </style>
+</head>
+<body>
+  <div id="container">
+      <img src="https://wallpapergram.ir/wp-img/WallpaperGram.IR_1553775356_23242.jpg" alt="Snow" style="width:100%;">
+      <input id="myinp" class="top-left" placeholder="search for a city" style="text-align: center; color: aliceblue;"></div>
+      <div class="centered2" id="city"></div>
+      
+      <div class="centered" id="weather"></div>
+      <div class="centered3" id="temp"></div>
+      <div class="centered4" id="mintemp"></div>
+      <div class="centered5" id="date"></div>
+
+    
+  </div>
+  <script>
+ var myinp = document.getElementById("myinp");
+let weather=document.getElementById("weather")
+let city=document.getElementById("city")
+let temp=document.getElementById("temp")
+let mintemp=document.getElementById("mintemp")
+let date=document.getElementById("date")
+
+
+
+// Execute a function when the user presses a key on the keyboard
+myinp.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    console.log(myinp.value);
+
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+myinp.value+'&appid=568c5f9759c814e7258dc64b450b67af')
+    .then(res=>res.json())
+    .then(user=>{
+      console.log(user);
+
+        showdata(user)
+        function showdata(user){
+         weather.innerHTML='Main weather='+user.weather[0].main
+         city.innerHTML=user.name
+         temp.innerHTML=`Temp=${Math.round(user.main.temp-273.15)}C°`
+        }
+        mintemp.innerHTML=`${Math.round(user.main.temp_min-273.15)}C°/${Math.round(user.main.temp_max-273.15)}C°`
+    })
+  }
+});
+window.addEventListener('load',showdate())
+function showdate(){
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var months= ["January","February","March","April","May","June","July",
+            "August","September","October","November","December"];
+
+    let now=new Date()
+    let day=days[now.getDay()]
+    console.log(day);
+    let month=months[now.getMonth()]
+    let today=now.getDate()
+    console.log(month);
+    console.log(today);
+date.innerHTML=day+' '+today+' '+month
+}
+
+  </script>
+</body>
+</html>
