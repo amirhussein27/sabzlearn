@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="mytext">mytext</p>
+  <input type="text" id="myinp">
+  <button id="btn">copy</button>
+  <script>
+    let mytext=document.getElementById("mytext").textContent
+    let btn=document.getElementById("btn")
+    let myinp=document.getElementById("myinp")
+    btn.addEventListener('click',()=>{
+      if (window.navigator.clipboard) {
+      window.navigator.clipboard.writeText(myinp.value)
+        
+      }
+      else{
+        alert('not supported')
+      }
+    })
+  </script>
+</body>
+</html>
