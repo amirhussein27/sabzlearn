@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		let prices=[1_000,2_000_000,500_000,90_000,30_000]
+
+	let totlaprice=prices.reduce((prevprice,currentprice)=>{
+			console.log(prevprice,currentprice)
+			return currentprice + prevprice
+		})
+		console.log(totlaprice);
+	</script>
+</body>
+</html>
