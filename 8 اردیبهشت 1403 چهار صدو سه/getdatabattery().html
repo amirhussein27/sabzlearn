@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="mytext">getdatabattery</p>
+  <button id="btn">getdatabattery</button>
+  <script>
+    let mytext=document.getElementById("mytext").textContent
+    let btn=document.getElementById("btn")
+
+    btn.addEventListener('click',()=>{
+   
+      window.navigator.getBattery().then(res=>{
+        console.log(res);
+      })
+    
+    })
+  </script>
+</body>
+</html>
