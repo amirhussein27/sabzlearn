@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <p id="myp">hi this is text</p> -->
+	<site-user>
+hi
+	</site-user>
+	<site-user>
+		hi
+			</site-user>
+	
+	<script>
+		let myp=document.getElementById("myp")
+		// console.log(myp);
+class siteuser extends HTMLElement{
+constructor(){
+	super()
+
+	console.log("worked",this);
+
+	this.innerHTML=`<h1>bye</h1><hr>`
+}
+}
+
+window.customElements.define('site-user',siteuser)
+</script>
+</body>
+</html>

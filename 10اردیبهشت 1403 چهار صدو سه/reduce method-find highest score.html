@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		let users=[
+{ id:1 ,name:'Ali' ,score:67},
+{ id:2 ,name:'Amir' ,score:90},	
+{ id:3 ,name:'Abas' ,score:102},
+{ id:4 ,name:'Asghar' ,score:73},
+{ id:5 ,name:'Reza' ,score:93}		
+		]
+
+	let maxscore=users.reduce((last,current)=>{
+		console.log(last,current);
+
+		if(last<current.score){
+			return current.score
+		}
+		else{
+			return last
+		}
+		},0)
+		console.log('minscore=',maxscore);
+		let minscore=users.reduce((last,current)=>{
+		console.log(last,current);
+
+		if(last<current.score){
+			return last
+		}
+		else{
+			return current.score
+		}
+		},500)
+		console.log('minscore=',minscore);
+
+	</script>
+</body>
+</html>

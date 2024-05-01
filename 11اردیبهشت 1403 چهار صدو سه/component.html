@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+	</style>
+</head>
+<body>
+	<!-- <p id="myp">hi this is text</p> -->
+	<site-user>
+		<h1 slot="username">Amir</h1>
+		<span slot="job">Js develop</span>
+	</site-user>
+	<site-user>
+		<h1 slot="username">Ali</h1>
+		<span slot="job">Admin</span>
+
+			</site-user>
+			<site-user>
+		<span slot="job">chief</span>
+
+				<h1 slot="username">Hasan</h1>
+
+					</site-user>
+	
+	<script>
+let template=document.createElement('template')
+template.innerHTML=`
+<link rel="stylesheet" href="style-component.css">
+<slot name="username"></slot><slot name="job"></slot><button>remove</button><hr>
+`
+console.log(template);
+		let myp=document.getElementById("myp")
+		// console.log(myp);
+class siteuser extends HTMLElement{
+constructor(){
+	super()
+
+	// console.log("worked",this);
+
+	this.attachShadow({mode:'open'})
+	this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+}
+
+connectedCallback(){
+	console.log('logger');
+	console.log(this);
+	let removebtn=this.shadowRoot.querySelector('button')
+	removebtn.addEventListener('click',()=>{
+		this.userremove(this)
+	})
+}
+
+	userremove(el){
+		console.log('removed clicked');
+		console.log(this);
+
+		el.remove()
+	}
+
+disconnectedCallback(){
+console.log('disconnected');
+let removebtn=this.shadowRoot.querySelector('button')
+removebtn.removeEventListener('click',this.userremove)
+}
+}
+
+
+
+window.customElements.define('site-user',siteuser)
+</script>
+</body>
+</html>

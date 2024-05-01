@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+</head>
+<body>
+	<header-m property="this is a property">
+		s
+	</header-m>
+	<header-m property="this is a property">
+		s
+	</header-m>
+	<header-m property="this is a new property">
+		
+	</header-m>
+	
+	<script>
+let template=document.createElement('template')
+template.innerHTML=`
+<link rel="stylesheet" href="componentprojectstyle.css">
+<div class="header"><h2></h2></div>`
+		class headerm extends HTMLElement{
+constructor(){
+super()
+
+this.attachShadow({mode:'open'})
+this.shadowRoot.appendChild(template.content.cloneNode(true))
+console.log(this);
+this.innerHTML='test'
+}
+connectedCallback(){
+this.shadowRoot.querySelector('h2').innerHTML=this.getAttribute('property')
+
+}
+static observedAttributes(){
+	return['property']
+}
+		}
+		window.customElements.define('header-m',headerm)
+	</script>
+</body>
+</html>

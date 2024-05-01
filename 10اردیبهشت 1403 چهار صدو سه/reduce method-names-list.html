@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		let list=[
+			['ali','mohamad'],
+			['ashkan','reza','hamid','babak'],
+			['amin','qadir','sasan'],
+			['last name']
+		]
+
+let myreduce=list.reduce((prevelist,currentlist)=>{
+console.log(...list);
+console.log(list);
+console.log(list[1]);
+// for(i=0;i<list.length;i++){
+	return prevelist.concat(currentlist)
+
+// or use this method 
+
+// return [...prevelist,...currentlist]
+
+// }
+	})
+console.log(myreduce);
+
+	
+	</script>
+</body>
+</html>

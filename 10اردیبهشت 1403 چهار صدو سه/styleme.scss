@@ -1,0 +1,11 @@
+$primary:red;
+$secondary:green;
+body{
+    background-color: $primary;
+}
+h1{
+    color: $primary;
+}
+.sub-menu{
+color: $secondary;
+}
