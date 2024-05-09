@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  let userlogin=(username,password,callback)=>{
+    setTimeout(() => {
+   callback({
+    username:username,
+      password:password
+   })
+    }, 2000);
+  }
+
+let logininfo=userlogin('Amir','0000',(userobj)=>{
+console.log('user logged',userobj);
+})
+
+  </script>
+</body>
+</html>

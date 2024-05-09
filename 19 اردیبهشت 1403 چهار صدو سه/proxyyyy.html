@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const user = {
+id:1,
+firstname:"Amir",
+lastname:"Eh",
+age:22
+}
+
+proxyuser = new Proxy(user,{
+  get: function(target,property){
+console.log(property);
+console.log("target",target);
+
+return property in target ? target[property] : "404"
+
+  },
+  set: function(target,property,value){
+console.log("target",target);
+console.log("property",property);
+console.log("value",value);
+if (property=='age' && value<0) {
+  value=0
+}
+
+if (property=='type' && ['user','admin','teacher','me'].includes(value.toLowerCase()) ) {
+  target[property]=value
+}
+else{
+  console.log('4004');
+}
+
+target[property]=value
+  }
+})
+
+proxyuser.age=-100
+console.log(proxyuser.age);
+
+proxyuser.type='mde'
+console.log(proxyuser.type);
+  </script>
+</body>
+</html>

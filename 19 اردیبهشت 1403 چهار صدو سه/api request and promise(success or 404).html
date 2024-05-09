@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>
+  <script>
+fetch("https://amirsimple1-7c419-default-rtdb.firebaseio.com/users.json")
+.then(res=>{if(res.status=200) {
+  console.log("okk")
+}
+else{
+  console.log("not ok");
+}})
+
+
+  </script>
+</body>
+</html>

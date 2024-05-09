@@ -1,0 +1,42 @@
+<script>
+    let template=document.createElement('template')
+template.innerHTML=`
+<link rel="stylesheet" href="site-user/site-user.css">
+
+<article class="projects__card">
+<div class="projects__image">
+<slot></slot>
+
+    <i class="ri-arrow-right-up-line"></i>
+  </a>
+</div>
+
+<div class="projects__content">
+  <slot></slot>
+
+  <slot></slot>
+</div>
+
+<div class="projects__buttons">
+    <i class="ri-github-line"></i> Source Code
+  </a>
+
+    <i class="ri-dribbble-line"></i> View
+  </a>
+</div>
+</article>
+`
+
+class card extends HTMLElement{
+constructor(){
+super()
+this.attachShadow({mode:'open'})
+this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+
+}
+
+}
+
+window.customElements.define('card-box',card)
+  </script>

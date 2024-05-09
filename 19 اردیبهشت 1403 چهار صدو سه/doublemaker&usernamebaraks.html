@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" placeholder="doublemaker" id="doublemaker"><button id="double">click</button>
+  <br><br>
+  <input type="text" placeholder="reverse" id="reverse"><button id="rev">click</button>
+ <br><br>
+  <strong>double num:</strong><p id="num"> please fill input</p>
+ <strong>reverse string:</strong><p id="result"> please fill input</p>
+
+ 
+ <script>
+  let result=document.getElementById("result")
+  let num=document.getElementById("num")
+    let doublemakerinp=document.getElementById("doublemaker")
+    let reverseinp=document.getElementById("reverse")
+let rev=document.getElementById("rev")
+let double=document.getElementById("double")
+
+double.addEventListener('click',doublemaker)
+
+function doublemaker(){
+// console.log(doublemakerinp.value);
+let me=doublemakerinp.value *2
+num.innerHTML=me
+}
+
+rev.addEventListener('click',reversemaker)
+function reversemaker(){
+let tosplit= reverseinp.value.split("")
+console.log(tosplit);
+let toreverse= tosplit.reverse()
+console.log(toreverse);
+let tojoin= toreverse.join("")
+console.log(tojoin);
+result.innerHTML=tojoin
+}
+
+  </script>
+</body>
+</html>

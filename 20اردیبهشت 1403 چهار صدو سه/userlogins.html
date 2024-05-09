@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let userlogin=(username,password,callback)=>{
+      setTimeout(() => {
+        callback({
+        username:username,
+        password:password,
+        email:'amir@gmail.com'
+      })
+      }, 2000);
+    
+    }
+
+    let usercourses=(username,callback)=>{
+      setTimeout(() => {
+        callback([
+        { id:21, tiitle:'js exper',price:'free'} ,
+        { id:34, tiitle:'vue exper',price:'2000000Toman'} 
+        ])
+      }, 3000);
+    }
+
+    let logininfo=userlogin('Amir','0000',(userobject)=>{
+      console.log('loaded',userobject);
+      usercourses(userobject.username,(userallcourses)=>{
+console.log('user courses',userallcourses);
+      })
+    })
+   
+
+  </script>
+</body>
+</html>

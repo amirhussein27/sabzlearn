@@ -1,0 +1,23 @@
+@import url("https://v1.fontapi.ir/css/Vazir");
+@import url("https://v1.fontapi.ir/css/Yekan");
+@import url("https://v1.fontapi.ir/css/Sahel");
+@import url("https://v1.fontapi.ir/css/Estedad");
+body {
+  color: rgb(255, 255, 255);
+  font-family: Yekan, sans-serif;
+  text-align: right;
+}
+
+.vazir {
+  color: rgb(24, 105, 226);
+  font-family: Vazir, sans-serif;
+  background-color: rgb(252, 22, 22);
+  text-align: right;
+}
+
+.estedad {
+  color: lime;
+  font-family: Estedad, sans-serif;
+  background-color: rgb(252, 22, 22);
+  text-align: right;
+}/*# sourceMappingURL=fonts.css.map */

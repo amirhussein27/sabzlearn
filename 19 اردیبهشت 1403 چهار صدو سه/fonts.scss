@@ -1,0 +1,50 @@
+@import url('https://v1.fontapi.ir/css/Vazir');
+@import url('https://v1.fontapi.ir/css/Yekan');
+@import url('https://v1.fontapi.ir/css/Sahel');
+@import url('https://v1.fontapi.ir/css/Estedad');
+
+@mixin myyekan{
+  // $myFont: Helvetica, sans-serif;
+color: rgb(255, 207, 48);
+  $myFontSize: 28px;
+  $myWidth: 680px;
+ font-family: Yekan, sans-serif;
+}
+
+@mixin vazir{
+  // $myFont: Helvetica, sans-serif;
+color: rgb(24, 105, 226);
+
+  $myColor: rgb(218, 86, 33);
+  $myFontSize: 18px;
+  $myWidth: 680px;
+ font-family: Vazir, sans-serif;
+
+}
+
+@mixin estedadd{
+  // $myFont: Helvetica, sans-serif;
+  color: lime;
+  $myColor: rgb(49, 227, 240);
+  $myFontSize: 18px;
+  $myWidth: 680px;
+  $myFont: Estedad, sans-serif;
+ font-family: Estedad, sans-serif;
+}
+
+body{
+@include myyekan;
+text-align: right
+}
+
+.vazir{
+  @include vazir;
+  background-color: rgb(252, 22, 22);
+  text-align: right
+  }
+
+  .estedad{
+    @include estedadd;
+    background-color: rgb(252, 22, 22);
+    text-align: right
+    }
